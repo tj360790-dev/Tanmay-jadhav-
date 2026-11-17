@@ -5,109 +5,273 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tanmay Jadhav | Portfolio</title>
+
 <style>
-*{box-sizing:border-box}
-body{
- margin:0;
- font-family:Arial,sans-serif;
- background:#0b1020;
- color:white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-header{
- padding:22px 8%;
- display:flex;
- justify-content:space-between;
- align-items:center;
- background:#111a30;
+
+body {
+  font-family: Arial, sans-serif;
+  background: #07111f;
+  color: white;
 }
-header h2{color:#38bdf8}
-nav a{
- color:white;
- text-decoration:none;
- margin:10px;
+
+/* Automatic Background Slideshow */
+.hero {
+  min-height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 100px 8%;
+  overflow: hidden;
+  background: #07111f;
 }
-.hero{
- padding:100px 8%;
- min-height:400px;
+
+.slideshow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
-.hero h1{font-size:45px}
-.hero span{color:#38bdf8}
-.hero p{color:#cbd5e1;font-size:18px}
-section{padding:45px 8%}
-.card{
- background:#17233b;
- padding:25px;
- border-radius:14px;
- margin:15px 0;
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: slideshow 10s infinite;
 }
-button{
- background:#38bdf8;
- padding:13px 25px;
- border:0;
- border-radius:8px;
- font-weight:bold;
+
+.slide:nth-child(1) {
+  background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1800');
 }
-a{color:#38bdf8}
-footer{
- text-align:center;
- padding:25px;
- background:#111a30;
+
+.slide:nth-child(2) {
+  background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1800');
+  animation-delay: 5s;
+}
+
+@keyframes slideshow {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  45% { opacity: 1; }
+  55% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(3,10,25,.95),
+    rgba(3,10,25,.55)
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 6vw, 65px);
+  margin-bottom: 18px;
+}
+
+.hero h1 span {
+  color: #38bdf8;
+}
+
+.hero h2 {
+  color: #7dd3fc;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #e2e8f0;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.btn {
+  display: inline-block;
+  background: #0284c7;
+  color: white;
+  padding: 14px 25px;
+  margin-top: 25px;
+  text-decoration: none;
+  border-radius: 7px;
+}
+
+header {
+  background: #0c1930;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 5;
+}
+
+header h2 {
+  color: #38bdf8;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+}
+
+section {
+  padding: 65px 8%;
+}
+
+section h2 {
+  color: #38bdf8;
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+.card {
+  background: #13243d;
+  border: 1px solid #263e5d;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills span {
+  background: #123e62;
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+footer {
+  background: #0c1930;
+  text-align: center;
+  padding: 25px;
+  color: #cbd5e1;
+}
+
+@media(max-width:600px) {
+  header {
+    gap: 15px;
+  }
+  nav a {
+    display: inline-block;
+    margin: 6px;
+  }
+  .hero {
+    min-height: 75vh;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<h2>Tanmay.</h2>
-<nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
+  <h2>Tanmay.</h2>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <div class="hero">
-<h1>Hello, I'm <span>Tanmay Jadhav</span></h1>
-<h2>Power BI Developer | Data Analyst</h2>
-<p>Welcome to my personal portfolio website.</p>
-<a href="#projects"><button>View My Projects</button></a>
+
+  <div class="slideshow">
+    <div class="slide"></div>
+    <div class="slide"></div>
+  </div>
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h1>Hello, I'm <span>Tanmay Jadhav</span></h1>
+    <h2>Power BI Developer | Data Analyst</h2>
+    <p>
+      Welcome to my professional portfolio.
+      I am passionate about Data Analytics,
+      Power BI dashboards and MIS Reporting.
+    </p>
+    <a href="#projects" class="btn">Explore My Projects</a>
+  </div>
+
 </div>
 
 <section id="about">
-<h2>About Me</h2>
-<div class="card">
-<p>I am interested in Data Analytics, Power BI and MIS Reporting.
-I enjoy creating interactive dashboards and analyzing data.</p>
-</div>
+  <h2>About Me</h2>
+  <div class="card">
+    I am interested in Data Analytics, Power BI,
+    Microsoft Excel and MIS Reporting.
+    I enjoy transforming data into meaningful
+    business insights.
+  </div>
 </section>
 
 <section id="skills">
-<h2>My Skills</h2>
-<div class="card">
-<p>Power BI | Microsoft Excel | SQL | Data Visualization | MIS Reporting</p>
-</div>
+  <h2>My Skills</h2>
+  <div class="card skills">
+    <span>Power BI</span>
+    <span>Microsoft Excel</span>
+    <span>SQL</span>
+    <span>MIS Reporting</span>
+    <span>Data Visualization</span>
+    <span>Dashboard Development</span>
+  </div>
 </section>
 
 <section id="projects">
-<h2>My Projects</h2>
-<div class="card">
-<h3>Starbucks Sales Dashboard</h3>
-<p>Power BI Dashboard Project</p>
-<p>Interactive data visualization and business insights.</p>
-</div>
+  <h2>My Projects</h2>
+
+  <div class="card">
+    <h3>Starbucks Sales Dashboard</h3>
+    <p>
+      Power BI Dashboard Project
+    </p>
+    <p>
+      Interactive dashboard for sales analysis
+      and business insights.
+    </p>
+  </div>
+
 </section>
 
 <section id="contact">
-<h2>Contact Me</h2>
-<div class="card">
-<p>Email: tj360790@gmail.com</p>
-<p>GitHub: <a href="https://github.com/tj360790-dev">My GitHub Profile</a></p>
-</div>
+  <h2>Contact Me</h2>
+  <div class="card">
+    <p>Email: tj360790@gmail.com</p>
+    <p>
+      GitHub:
+      <a href="https://github.com/tj360790-dev"
+         style="color:#38bdf8">
+         Visit My GitHub
+      </a>
+    </p>
+  </div>
 </section>
 
 <footer>
-<p>© 2026 Tanmay Jadhav | Portfolio</p>
+  © 2026 Tanmay Jadhav | Personal Portfolio
 </footer>
 
 </body>
