@@ -213,65 +213,217 @@ footer{text-align:center;padding:24px;background:#031023;color:#a6c2dc;border-to
  </div>
 </section>
 
+
 <section id="gallery">
- <div class="heading"><h2>Project Gallery</h2><p>Power BI, MIS, SQL & Excel</p></div>
- <div class="grid" id="galleryGrid">
+  <div class="heading">
+    <h2>Professional Dashboard Gallery</h2>
+    <p>Power BI | MIS Reporting | SQL | Excel</p>
+  </div>
 
-  <div class="card gallery-card active">
-   <div class="project-visual">
-    <div class="tag">POWER BI DASHBOARD</div>
-    <div class="mini-bars">
-     <span style="height:50%"></span><span style="height:85%"></span>
-     <span style="height:65%"></span><span style="height:95%"></span>
-     <span style="height:75%"></span>
+  <div class="dashboard-gallery">
+
+    <div class="dashboard-slide active">
+      <div class="dashboard powerbi">
+        <h2>POWER BI ANALYTICS</h2>
+        <p class="sub">STARBUCKS SALES PERFORMANCE</p>
+        <div class="metrics">
+          <div><small>Total Sales</small><strong>$8.5M</strong></div>
+          <div><small>Total Orders</small><strong>12.4K</strong></div>
+          <div><small>Customers</small><strong>4.8K</strong></div>
+        </div>
+        <h3>Monthly Sales Trend</h3>
+        <div class="chart">
+          <i style="height:45%"></i><i style="height:65%"></i>
+          <i style="height:55%"></i><i style="height:90%"></i>
+          <i style="height:72%"></i><i style="height:100%"></i>
+          <i style="height:80%"></i><i style="height:95%"></i>
+        </div>
+        <div class="chart-labels">JAN　 FEB　 MAR　 APR　 MAY　 JUN　 JUL　 AUG</div>
+      </div>
+      <h3>Starbucks Sales Dashboard</h3>
     </div>
-   </div>
-   <h3>Power BI Dashboard</h3>
-   <p>Data visualisation and business insights</p>
-  </div>
 
-  <div class="card gallery-card">
-   <div class="project-visual">
-    <div class="tag">MIS REPORTING</div>
-    <div class="mini-line" style="width:95%"></div>
-    <div class="mini-line" style="width:75%"></div>
-    <div class="mini-line" style="width:85%"></div>
-    <div class="mini-line" style="width:65%"></div>
-   </div>
-   <h3>MIS Reporting</h3>
-   <p>Reporting and performance tracking</p>
-  </div>
-
-  <div class="card gallery-card">
-   <div class="project-visual">
-    <div class="tag">SQL ANALYSIS</div>
-    <p style="color:#7de0ff;font-family:monospace;margin-top:25px">
-     SELECT<br>JOIN<br>GROUP BY<br>ORDER BY
-    </p>
-   </div>
-   <h3>SQL Queries</h3>
-   <p>Database queries and analysis</p>
-  </div>
-
-  <div class="card gallery-card">
-   <div class="project-visual">
-    <div class="tag">MICROSOFT EXCEL</div>
-    <div class="mini-bars">
-     <span style="height:65%"></span><span style="height:45%"></span>
-     <span style="height:90%"></span><span style="height:75%"></span>
-     <span style="height:95%"></span>
+    <div class="dashboard-slide">
+      <div class="dashboard mis">
+        <h2>MIS REPORTING</h2>
+        <p class="sub">BUSINESS PERFORMANCE OVERVIEW</p>
+        <div class="metrics">
+          <div><small>Target</small><strong>95%</strong></div>
+          <div><small>Achievement</small><strong>89%</strong></div>
+          <div><small>Reports</small><strong>120</strong></div>
+        </div>
+        <h3>Department Performance</h3>
+        <div class="progress"><span style="width:90%">Sales</span></div>
+        <div class="progress"><span style="width:75%">Finance</span></div>
+        <div class="progress"><span style="width:95%">Operations</span></div>
+        <div class="progress"><span style="width:65%">HR</span></div>
+      </div>
+      <h3>MIS Reporting Dashboard</h3>
     </div>
-   </div>
-   <h3>Excel Reports</h3>
-   <p>Data management and reporting</p>
+
+    <div class="dashboard-slide">
+      <div class="dashboard sql">
+        <h2>SQL DATA ANALYTICS</h2>
+        <p class="sub">DATABASE & QUERY PERFORMANCE</p>
+        <div class="metrics">
+          <div><small>Total Records</small><strong>25K</strong></div>
+          <div><small>Queries</small><strong>180</strong></div>
+          <div><small>Accuracy</small><strong>98%</strong></div>
+        </div>
+        <h3>SQL Query Examples</h3>
+        <pre>SELECT category, SUM(sales)
+FROM orders
+GROUP BY category
+ORDER BY SUM(sales) DESC;</pre>
+        <div class="sql-bars">
+          <i style="width:90%"></i>
+          <i style="width:70%"></i>
+          <i style="width:85%"></i>
+        </div>
+      </div>
+      <h3>SQL Analysis Dashboard</h3>
+    </div>
+
+    <div class="dashboard-slide">
+      <div class="dashboard excel">
+        <h2>EXCEL ANALYTICS</h2>
+        <p class="sub">SALES & BUSINESS REPORT</p>
+        <div class="metrics">
+          <div><small>Revenue</small><strong>₹6.2M</strong></div>
+          <div><small>Products</small><strong>850</strong></div>
+          <div><small>Growth</small><strong>72%</strong></div>
+        </div>
+        <h3>Monthly Revenue</h3>
+        <div class="chart">
+          <i style="height:55%"></i><i style="height:75%"></i>
+          <i style="height:65%"></i><i style="height:95%"></i>
+          <i style="height:80%"></i><i style="height:100%"></i>
+        </div>
+        <div class="chart-labels">JAN　 FEB　 MAR　 APR　 MAY　 JUN</div>
+      </div>
+      <h3>Excel Sales Dashboard</h3>
+    </div>
+
   </div>
 
- </div>
- <div class="gallery-controls">
-  <button onclick="previousGallery()">❮ Previous</button>
-  <button onclick="nextGallery()">Next ❯</button>
- </div>
+  <div class="gallery-controls">
+    <button onclick="previousDashboard()">❮ Previous</button>
+    <button onclick="nextDashboard()">Next ❯</button>
+  </div>
 </section>
+
+<style>
+.dashboard-gallery {
+  display:flex;
+  justify-content:center;
+  padding:20px 0;
+}
+.dashboard-slide {
+  display:none;
+  width:100%;
+  max-width:850px;
+  text-align:center;
+}
+.dashboard-slide.active {display:block}
+.dashboard {
+  padding:30px;
+  border-radius:18px;
+  min-height:390px;
+  text-align:left;
+  color:white;
+  background:linear-gradient(140deg,#102b4b,#061326);
+  border:1px solid #28baff;
+  box-shadow:0 0 25px #168cff44;
+}
+.dashboard h2 {color:#43caff}
+.dashboard .sub {color:#a7cce8;font-size:12px}
+.metrics {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:25px 0;
+}
+.metrics div {
+  flex:1;
+  min-width:100px;
+  padding:15px;
+  background:#183b60;
+  border-radius:10px;
+}
+.metrics small,.metrics strong {display:block}
+.metrics small {color:#a9c8e5}
+.metrics strong {font-size:25px;color:#4bd1ff}
+.chart {
+  height:145px;
+  display:flex;
+  align-items:end;
+  gap:15px;
+  padding:15px;
+  background:#18314c;
+  border-radius:10px;
+}
+.chart i {
+  flex:1;
+  background:linear-gradient(#50d9ff,#0874dc);
+  border-radius:5px 5px 0 0;
+}
+.chart-labels {font-size:11px;color:#bdd7ef;margin-top:10px}
+.progress {
+  background:#203b58;
+  height:28px;
+  margin:15px 0;
+  border-radius:5px;
+}
+.progress span {
+  display:block;
+  height:100%;
+  background:#087fce;
+  border-radius:5px;
+  padding:5px;
+  font-size:12px;
+}
+.sql pre {
+  background:#020d1c;
+  padding:18px;
+  color:#6be4ff;
+  overflow:auto;
+  border-radius:8px;
+}
+.sql-bars i {
+  display:block;
+  height:13px;
+  background:#18a9d9;
+  margin:10px 0;
+  border-radius:5px;
+}
+@media(max-width:600px) {
+  .dashboard {padding:16px;min-height:350px}
+  .metrics strong {font-size:19px}
+  .chart {gap:7px}
+}
+</style>
+
+<script>
+let dashboardIndex = 0;
+function showDashboard() {
+  const slides = document.querySelectorAll('.dashboard-slide');
+  slides.forEach((slide, index) => {
+    slide.classList.toggle('active', index === dashboardIndex);
+  });
+}
+function nextDashboard() {
+  const slides = document.querySelectorAll('.dashboard-slide');
+  dashboardIndex = (dashboardIndex + 1) % slides.length;
+  showDashboard();
+}
+function previousDashboard() {
+  const slides = document.querySelectorAll('.dashboard-slide');
+  dashboardIndex = (dashboardIndex - 1 + slides.length) % slides.length;
+  showDashboard();
+}
+setInterval(nextDashboard, 4000);
+</script>
+
 
 <section id="contact" class="contact">
  <div class="heading"><h2>Contact Me</h2><p>Let's connect and work together</p></div>
