@@ -4,797 +4,438 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080b18">
-<title>Tanmay Jadhav | Data Analyst Portfolio</title>
+<title>Tanmay Jadhav | Data Analyst</title>
 
 <style>
-:root {
-  --bg: #080b18;
-  --card: #11182b;
-  --purple: #8b5cf6;
-  --blue: #38bdf8;
-  --text: #f8fafc;
-  --muted: #a5b4c8;
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ font-family:Arial,sans-serif;
+ background:#071426;color:white;
+ line-height:1.6;
+}
+nav{
+ background:#081a30;padding:17px 6%;
+ display:flex;justify-content:space-between;
+ align-items:center;flex-wrap:wrap;
+ position:sticky;top:0;z-index:99;
+ border-bottom:1px solid #174b70;
+}
+.logo{font-size:20px;font-weight:bold;color:#38c8ff}
+nav a{color:white;text-decoration:none;margin:7px;font-size:14px}
+nav a:hover{color:#38c8ff}
+
+.hero{
+ padding:90px 8%;min-height:520px;
+ display:flex;align-items:center;
+ justify-content:space-between;gap:30px;
+ flex-wrap:wrap;
+ background:linear-gradient(120deg,#071426,#0b3155,#071426);
+}
+.hero-content{max-width:600px}
+.hero h1{font-size:45px;line-height:1.2;margin:15px 0}
+.hero h1 span{color:#38c8ff}
+.hero p{color:#c5d7e7;font-size:17px;margin:15px 0}
+.btn{
+ display:inline-block;background:#079bd5;
+ color:white;text-decoration:none;
+ padding:12px 22px;border-radius:6px;
+ margin:10px 7px 0 0;font-weight:bold;
+}
+.btn:hover{background:#0878a8}
+
+.hero-image{
+ width:420px;max-width:100%;
+ border:1px solid #2382ae;
+ border-radius:15px;overflow:hidden;
+ box-shadow:0 0 30px #079bd533;
+}
+.hero-image img{width:100%;display:block}
+
+section{padding:70px 8%}
+.heading{text-align:center;margin-bottom:35px}
+.heading h2{font-size:32px;color:#38c8ff}
+.heading p{color:#a9bfd2;margin-top:7px}
+
+.about{
+ max-width:850px;margin:auto;
+ text-align:center;color:#c7d6e4;font-size:17px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+ gap:22px;
+}
+.card{
+ background:#0d223a;
+ border:1px solid #19486b;
+ border-radius:12px;
+ padding:20px;
+ transition:.3s;
+}
+.card:hover{transform:translateY(-5px);border-color:#38c8ff}
+.card h3{color:#45caff;margin:12px 0 7px}
+.card p{color:#b8c9d9}
+.icon{font-size:35px}
+
+.dashboard{
+ background:#0c2038;
+ border:1px solid #205577;
+ border-radius:12px;
+ padding:15px;
+ overflow:hidden;
+}
+.dashboard img{
+ width:100%;height:auto;
+ aspect-ratio:16/9;
+ object-fit:cover;
+ display:block;border-radius:7px;
+}
+.dashboard h3{color:#45caff;margin-top:12px}
+
+.kpis{display:flex;gap:8px;margin:12px 0}
+.kpi{
+ flex:1;background:#173e5e;
+ padding:10px 5px;border-radius:6px;
+ text-align:center;
+}
+.kpi strong{display:block;color:#45d6ff;font-size:19px}
+.kpi small{font-size:10px;color:#d2e5f3}
+.bars{
+ height:90px;display:flex;align-items:end;
+ gap:9px;padding:0 8px;
+ border-bottom:1px solid #64849b;
+}
+.bars span{
+ flex:1;background:linear-gradient(#48d8ff,#087bbd);
+ border-radius:4px 4px 0 0;
+}
+.sql-code{
+ color:#72e3ff;font-family:monospace;
+ font-size:14px;line-height:2;margin-top:14px;
+}
+.line-list span{
+ display:block;height:9px;background:#1c4d70;
+ border-radius:10px;margin:12px 0;
 }
 
+/* Gallery */
+.gallery-wrap{
+ max-width:1050px;margin:auto;
+ overflow:hidden;
+}
+.gallery-track{
+ display:flex;
+ transition:transform .6s ease;
+}
+.gallery-slide{
+ min-width:100%;
+ padding:10px;
+}
+.gallery-slide .dashboard{height:100%}
+.gallery-slide img{
+ width:100%;aspect-ratio:16/9;
+ object-fit:cover;
+}
+.gallery-controls{
+ text-align:center;margin-top:20px;
+}
+.gallery-controls button{
+ background:#087fb5;color:white;
+ border:0;padding:12px 22px;
+ margin:5px;border-radius:6px;
+ cursor:pointer;
+}
+.gallery-controls button:hover{background:#075c83}
 
-body {
-  background:
-    linear-gradient(
-      rgba(5, 10, 25, 0.90),
-      rgba(5, 10, 25, 0.94)
-    ),
-    url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920")
-    center center / cover fixed no-repeat;
-
-  color: #f8fafc;
-  font-family: Arial, sans-serif;
+.contact{text-align:center}
+.contact p{color:#c7d6e4;margin:12px}
+footer{
+ background:#06101e;text-align:center;
+ padding:25px;color:#9bb1c5;
 }
 
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.container {
-  width: 90%;
-  max-width: 1150px;
-  margin: auto;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(8,11,24,.95);
-  border-bottom: 1px solid #222b40;
-}
-
-nav {
-  min-height: 75px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.logo {
-  font-size: 23px;
-  font-weight: bold;
-  color: var(--blue);
-}
-
-.nav-links {
-  display: flex;
-  gap: 25px;
-  list-style: none;
-}
-
-.nav-links a {
-  color: var(--muted);
-  transition: .3s;
-}
-
-.nav-links a:hover {
-  color: var(--blue);
-}
-
-.menu-btn {
-  display: none;
-  background: none;
-  color: white;
-  border: none;
-  font-size: 27px;
-  cursor: pointer;
-}
-
-.hero {
-  min-height: 620px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 45px;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.tag {
-  color: var(--blue);
-  letter-spacing: 3px;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.hero h1 {
-  font-size: clamp(38px, 5vw, 65px);
-  line-height: 1.15;
-  margin: 20px 0;
-}
-
-.hero h1 span {
-  background: linear-gradient(90deg, var(--blue), var(--purple));
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.hero p {
-  color: var(--muted);
-  font-size: 17px;
-  max-width: 520px;
-  margin-bottom: 25px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 13px 24px;
-  border-radius: 8px;
-  background: linear-gradient(100deg, #2563eb, #8b5cf6);
-  color: white;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  margin: 5px 8px 5px 0;
-  transition: .3s;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px #5145cd55;
-}
-
-.btn-outline {
-  background: transparent;
-  border: 1px solid var(--purple);
-}
-
-section {
-  padding: 85px 0;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 35px;
-  margin-bottom: 12px;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: var(--muted);
-  margin-bottom: 45px;
-}
-
-/* Dashboard Slider */
-
-.slider {
-  position: relative;
-  background: #10172b;
-  border: 1px solid #293653;
-  padding: 18px;
-  border-radius: 18px;
-  box-shadow: 0 20px 60px #0008;
-  overflow: hidden;
-}
-
-.slide {
-  display: none;
-  animation: fade .7s;
-}
-
-.slide.active {
-  display: block;
-}
-
-@keyframes fade {
-  from {opacity: .2; transform: translateX(12px);}
-  to {opacity: 1; transform: translateX(0);}
-}
-
-.slide-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 20px;
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.slide-top strong {
-  color: white;
-  font-size: 16px;
-}
-
-.kpis {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.kpi {
-  padding: 15px 10px;
-  background: #1a2540;
-  border-radius: 10px;
-}
-
-.kpi small {
-  display: block;
-  color: var(--muted);
-}
-
-.kpi strong {
-  font-size: 21px;
-  color: var(--blue);
-}
-
-.graph {
-  height: 155px;
-  background: #151f35;
-  border-radius: 10px;
-  display: flex;
-  align-items: end;
-  justify-content: space-around;
-  padding: 15px;
-  gap: 10px;
-}
-
-.bar {
-  flex: 1;
-  background: linear-gradient(to top, #6244dd, #38bdf8);
-  border-radius: 5px 5px 0 0;
-  min-width: 10px;
-}
-
-.slider-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  margin-top: 18px;
-}
-
-.slider-controls button {
-  background: #263452;
-  color: white;
-  border: 0;
-  padding: 9px 16px;
-  border-radius: 7px;
-  cursor: pointer;
-}
-
-.dots {
-  display: flex;
-  gap: 8px;
-}
-
-.dot {
-  width: 9px;
-  height: 9px;
-  background: #64748b;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.dot.active {
-  background: var(--blue);
-  width: 23px;
-  border-radius: 8px;
-}
-
-/* About */
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  align-items: center;
-}
-
-.info-card {
-  background: var(--card);
-  padding: 30px;
-  border-radius: 14px;
-  border: 1px solid #25304a;
-}
-
-.info-card p {
-  color: var(--muted);
-  margin-top: 12px;
-}
-
-/* Skills */
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
-}
-
-.skill-card, .project-card {
-  background: var(--card);
-  padding: 25px;
-  border-radius: 14px;
-  border: 1px solid #25304a;
-  transition: .3s;
-}
-
-.skill-card:hover, .project-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--purple);
-}
-
-.skill-icon {
-  font-size: 32px;
-  margin-bottom: 12px;
-}
-
-.skill-card p, .project-card p {
-  color: var(--muted);
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-.project-visual {
-  height: 150px;
-  background: linear-gradient(135deg,#172b51,#38256e);
-  border-radius: 10px;
-  margin-bottom: 18px;
-  padding: 18px;
-  display: flex;
-  align-items: end;
-  justify-content: space-around;
-  overflow: hidden;
-}
-
-.project-visual span {
-  display: block;
-  width: 12%;
-  border-radius: 5px 5px 0 0;
-  background: linear-gradient(to top,#8b5cf6,#38bdf8);
-}
-
-/* Education */
-
-.timeline {
-  max-width: 750px;
-  margin: auto;
-}
-
-.timeline-item {
-  border-left: 3px solid var(--purple);
-  padding: 5px 25px 30px;
-  margin-left: 12px;
-}
-
-.timeline-item p {
-  color: var(--muted);
-}
-
-/* Contact */
-
-.contact-box {
-  max-width: 750px;
-  margin: auto;
-  text-align: center;
-  background: var(--card);
-  border: 1px solid #293653;
-  padding: 40px 25px;
-  border-radius: 15px;
-}
-
-.contact-box p {
-  color: var(--muted);
-  margin: 15px 0;
-}
-
-footer {
-  border-top: 1px solid #25304a;
-  text-align: center;
-  padding: 25px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-@media(max-width:850px) {
-  .hero, .about-grid {
-    grid-template-columns: 1fr;
-  }
-  .grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-}
-
-@media(max-width:600px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 75px;
-    left: 0;
-    width: 100%;
-    background: #10172b;
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .menu-btn {
-    display: block;
-  }
-
-  .hero {
-    padding-top: 45px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-title {
-    font-size: 29px;
-  }
-
-  .kpi strong {
-    font-size: 16px;
-  }
-
-  section {
-    padding: 60px 0;
-  }
+@media(max-width:650px){
+ nav{justify-content:center;gap:8px}
+ nav a{font-size:12px;margin:4px}
+ .hero{padding:60px 6%}
+ .hero h1{font-size:34px}
+ section{padding:55px 6%}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <nav class="container">
-    <a href="#home" class="logo">TJ.</a>
-
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<nav>
+ <div class="logo">TANMAY JADHAV | DATA ANALYST</div>
+ <div>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+ </div>
+</nav>
 
 <!-- HOME -->
-<section class="container hero" id="home">
+<header class="hero" id="home">
+ <div class="hero-content">
+  <p>WELCOME TO MY PROFESSIONAL PORTFOLIO</p>
+  <h1>Hi, I'm <span>Tanmay Jadhav</span></h1>
+  <h2>Data Analyst | Power BI Developer | MIS Reporting</h2>
+  <p>
+   BCA Graduate with skills in Power BI, SQL, Microsoft Excel
+   and MIS Reporting. Passionate about data analytics,
+   reporting and business intelligence.
+  </p>
+  <a class="btn" href="#projects">Explore Projects</a>
+  <a class="btn" href="#contact">Contact Me</a>
+ </div>
 
-  <div>
-    <div class="tag">WELCOME TO MY PORTFOLIO</div>
-
-    <h1>Hello, I'm <span>Tanmay Jadhav</span></h1>
-
-    <h2>Data Analyst | Business Intelligence Enthusiast</h2>
-
-    <p>
-      I am passionate about transforming raw data into meaningful
-      insights through data analysis, visualization and reporting.
-    </p>
-
-    <a href="#projects" class="btn">Explore Projects</a>
-    <a href="#contact" class="btn btn-outline">Contact Me</a>
-  </div>
-
-  <!-- AUTOMATIC DASHBOARD SLIDER -->
-  <div class="slider">
-
-    <div class="slide active">
-      <div class="slide-top">
-        <strong>Sales Analytics Dashboard</strong>
-        <span>POWER BI</span>
-      </div>
-      <div class="kpis">
-        <div class="kpi"><small>Revenue</small><strong>₹8.5L</strong></div>
-        <div class="kpi"><small>Orders</small><strong>1,250</strong></div>
-        <div class="kpi"><small>Growth</small><strong>24%</strong></div>
-      </div>
-      <div class="graph">
-        <span class="bar" style="height:35%"></span>
-        <span class="bar" style="height:65%"></span>
-        <span class="bar" style="height:45%"></span>
-        <span class="bar" style="height:90%"></span>
-        <span class="bar" style="height:70%"></span>
-        <span class="bar" style="height:100%"></span>
-      </div>
-    </div>
-
-    <div class="slide">
-      <div class="slide-top">
-        <strong>Excel Business Dashboard</strong>
-        <span>EXCEL</span>
-      </div>
-      <div class="kpis">
-        <div class="kpi"><small>Customers</small><strong>850</strong></div>
-        <div class="kpi"><small>Sales</small><strong>₹5.2L</strong></div>
-        <div class="kpi"><small>Target</small><strong>92%</strong></div>
-      </div>
-      <div class="graph">
-        <span class="bar" style="height:80%"></span>
-        <span class="bar" style="height:40%"></span>
-        <span class="bar" style="height:75%"></span>
-        <span class="bar" style="height:55%"></span>
-        <span class="bar" style="height:100%"></span>
-        <span class="bar" style="height:85%"></span>
-      </div>
-    </div>
-
-    <div class="slide">
-      <div class="slide-top">
-        <strong>Business Intelligence</strong>
-        <span>ANALYTICS</span>
-      </div>
-      <div class="kpis">
-        <div class="kpi"><small>Profit</small><strong>32%</strong></div>
-        <div class="kpi"><small>Reports</small><strong>120</strong></div>
-        <div class="kpi"><small>Efficiency</small><strong>95%</strong></div>
-      </div>
-      <div class="graph">
-        <span class="bar" style="height:50%"></span>
-        <span class="bar" style="height:80%"></span>
-        <span class="bar" style="height:65%"></span>
-        <span class="bar" style="height:100%"></span>
-        <span class="bar" style="height:75%"></span>
-        <span class="bar" style="height:90%"></span>
-      </div>
-    </div>
-
-    <div class="slider-controls">
-      <button onclick="changeSlide(-1)">❮</button>
-      <div class="dots">
-        <span class="dot active" onclick="goToSlide(0)"></span>
-        <span class="dot" onclick="goToSlide(1)"></span>
-        <span class="dot" onclick="goToSlide(2)"></span>
-      </div>
-      <button onclick="changeSlide(1)">❯</button>
-    </div>
-
-  </div>
-</section>
+ <div class="hero-image">
+  <img src="https://placehold.co/900x650/102d4b/38c8ff?text=DATA+ANALYTICS+DASHBOARD"
+       alt="Data Analytics Dashboard">
+ </div>
+</header>
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="container">
-    <h2 class="section-title">About Me</h2>
-    <p class="section-subtitle">Get to know me</p>
-
-    <div class="about-grid">
-      <div class="info-card">
-        <h3>Who I Am</h3>
-        <p>
-          Hello! I'm Tanmay Jadhav. I am interested in data analytics,
-          business intelligence and data visualization.
-          I enjoy working with data to discover useful insights
-          and create meaningful reports.
-        </p>
-      </div>
-
-      <div class="info-card">
-        <h3>My Career Objective</h3>
-        <p>
-          To build a career in data analytics by applying analytical
-          thinking, technical knowledge and problem-solving skills
-          to support better business decisions.
-        </p>
-      </div>
-    </div>
-  </div>
+ <div class="heading">
+  <h2>About Me</h2>
+  <p>Professional Profile</p>
+ </div>
+ <div class="about">
+  I am a BCA graduate interested in Data Analytics and Business
+  Intelligence. I have experience in MIS Reporting and skills
+  in Power BI, SQL and Microsoft Excel. I enjoy transforming
+  data into meaningful insights through reports and dashboards.
+ </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-  <div class="container">
-    <h2 class="section-title">My Skills</h2>
-    <p class="section-subtitle">Tools and technologies</p>
+ <div class="heading">
+  <h2>My Skills</h2>
+  <p>Tools & Technologies</p>
+ </div>
 
-    <div class="grid">
-      <div class="skill-card">
-        <div class="skill-icon">📊</div>
-        <h3>Power BI</h3>
-        <p>Data visualization, reports and interactive dashboards.</p>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon">📗</div>
-        <h3>Microsoft Excel</h3>
-        <p>Data cleaning, formulas, Pivot Tables and reporting.</p>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon">🗄️</div>
-        <h3>SQL</h3>
-        <p>Database queries, filtering and data retrieval.</p>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon">📈</div>
-        <h3>MIS Reporting</h3>
-        <p>Business reports and performance monitoring.</p>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon">🧹</div>
-        <h3>Data Cleaning</h3>
-        <p>Organizing and preparing data for analysis.</p>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon">💡</div>
-        <h3>Data Analysis</h3>
-        <p>Finding trends, patterns and useful insights.</p>
-      </div>
-    </div>
+ <div class="grid">
+  <div class="card">
+   <div class="icon">📊</div>
+   <h3>Power BI</h3>
+   <p>Interactive dashboards, data visualization and business insights.</p>
   </div>
+  <div class="card">
+   <div class="icon">🗄️</div>
+   <h3>SQL</h3>
+   <p>SQL queries, joins, filtering and database analysis.</p>
+  </div>
+  <div class="card">
+   <div class="icon">📈</div>
+   <h3>Microsoft Excel</h3>
+   <p>Data cleaning, formulas, Pivot Tables and reporting.</p>
+  </div>
+  <div class="card">
+   <div class="icon">📋</div>
+   <h3>MIS Reporting</h3>
+   <p>Daily reports, performance tracking and data management.</p>
+  </div>
+ </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- DASHBOARD PROJECTS -->
 <section id="projects">
-  <div class="container">
-    <h2 class="section-title">Featured Projects</h2>
-    <p class="section-subtitle">My analytics portfolio</p>
+ <div class="heading">
+  <h2>My Projects & Dashboards</h2>
+  <p>Data Analytics Portfolio</p>
+ </div>
 
-    <div class="grid">
+ <div class="grid">
 
-      <div class="project-card">
-        <div class="project-visual">
-          <span style="height:40%"></span>
-          <span style="height:70%"></span>
-          <span style="height:55%"></span>
-          <span style="height:95%"></span>
-          <span style="height:80%"></span>
-        </div>
-        <h3>Sales Dashboard</h3>
-        <p>Sales performance, revenue trends and business insights.</p>
-        <p><b>Tools:</b> Power BI, Excel</p>
-      </div>
-
-      <div class="project-card">
-        <div class="project-visual">
-          <span style="height:85%"></span>
-          <span style="height:45%"></span>
-          <span style="height:75%"></span>
-          <span style="height:60%"></span>
-          <span style="height:100%"></span>
-        </div>
-        <h3>Excel Dashboard</h3>
-        <p>Interactive business reporting and data visualization.</p>
-        <p><b>Tools:</b> Microsoft Excel</p>
-      </div>
-
-      <div class="project-card">
-        <div class="project-visual">
-          <span style="height:50%"></span>
-          <span style="height:90%"></span>
-          <span style="height:65%"></span>
-          <span style="height:80%"></span>
-          <span style="height:100%"></span>
-        </div>
-        <h3>SQL Data Analysis</h3>
-        <p>Data extraction, filtering and analytical queries.</p>
-        <p><b>Tools:</b> SQL</p>
-      </div>
-
+  <div class="card">
+   <div class="dashboard">
+    <div class="kpis">
+     <div class="kpi"><strong>Sales</strong><small>OVERVIEW</small></div>
+     <div class="kpi"><strong>Orders</strong><small>ANALYSIS</small></div>
+     <div class="kpi"><strong>Growth</strong><small>TREND</small></div>
     </div>
+    <div class="bars">
+     <span style="height:45%"></span>
+     <span style="height:80%"></span>
+     <span style="height:60%"></span>
+     <span style="height:95%"></span>
+     <span style="height:75%"></span>
+    </div>
+   </div>
+   <h3>Starbucks Sales Dashboard</h3>
+   <p>Power BI sales analytics and business insights.</p>
   </div>
+
+  <div class="card">
+   <div class="dashboard">
+    <div class="kpis">
+     <div class="kpi"><strong>Daily</strong><small>REPORTS</small></div>
+     <div class="kpi"><strong>Monthly</strong><small>TRACKING</small></div>
+    </div>
+    <div class="line-list">
+     <span style="width:95%"></span>
+     <span style="width:70%"></span>
+     <span style="width:85%"></span>
+     <span style="width:65%"></span>
+    </div>
+   </div>
+   <h3>MIS Reporting Dashboard</h3>
+   <p>Business reporting and performance monitoring.</p>
+  </div>
+
+  <div class="card">
+   <div class="dashboard">
+    <div class="sql-code">
+     SELECT * FROM Sales;<br>
+     SELECT SUM(Amount)<br>
+     FROM Orders;<br>
+     GROUP BY Category;<br>
+     ORDER BY Amount DESC;
+    </div>
+   </div>
+   <h3>SQL Data Analysis</h3>
+   <p>Database queries and data analysis.</p>
+  </div>
+
+  <div class="card">
+   <div class="dashboard">
+    <div class="kpis">
+     <div class="kpi"><strong>Pivot</strong><small>TABLES</small></div>
+     <div class="kpi"><strong>Charts</strong><small>REPORTS</small></div>
+    </div>
+    <div class="bars">
+     <span style="height:65%"></span>
+     <span style="height:45%"></span>
+     <span style="height:90%"></span>
+     <span style="height:75%"></span>
+     <span style="height:95%"></span>
+    </div>
+   </div>
+   <h3>Excel Dashboard</h3>
+   <p>Excel reports, charts and data visualization.</p>
+  </div>
+
+ </div>
+ <p style="text-align:center;color:#91aabd;font-size:12px;margin-top:18px">
+  Dashboard visuals are illustrative samples, not actual project screenshots.
+ </p>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section id="gallery">
+ <div class="heading">
+  <h2>Project Gallery</h2>
+  <p>Power BI • MIS • SQL • Excel</p>
+ </div>
+
+ <div class="gallery-wrap">
+  <div class="gallery-track" id="galleryTrack">
+
+   <div class="gallery-slide">
+    <div class="dashboard">
+     <img src="https://placehold.co/1200x675/102d4b/38c8ff?text=POWER+BI+SALES+DASHBOARD"
+          alt="Power BI Dashboard">
+     <h3>Power BI Dashboard</h3>
+     <p>Sales analysis and interactive business intelligence.</p>
+    </div>
+   </div>
+
+   <div class="gallery-slide">
+    <div class="dashboard">
+     <img src="https://placehold.co/1200x675/102d4b/38c8ff?text=MIS+REPORTING+DASHBOARD"
+          alt="MIS Dashboard">
+     <h3>MIS Reporting</h3>
+     <p>Business performance and reporting overview.</p>
+    </div>
+   </div>
+
+   <div class="gallery-slide">
+    <div class="dashboard">
+     <img src="https://placehold.co/1200x675/102d4b/38c8ff?text=SQL+DATA+ANALYSIS"
+          alt="SQL Analysis">
+     <h3>SQL Analysis</h3>
+     <p>Database queries and data insights.</p>
+    </div>
+   </div>
+
+   <div class="gallery-slide">
+    <div class="dashboard">
+     <img src="https://placehold.co/1200x675/102d4b/38c8ff?text=EXCEL+ANALYTICS"
+          alt="Excel Dashboard">
+     <h3>Excel Dashboard</h3>
+     <p>Excel reports and data visualization.</p>
+    </div>
+   </div>
+
+  </div>
+ </div>
+
+ <div class="gallery-controls">
+  <button onclick="changeSlide(-1)">❮ Previous</button>
+  <button onclick="changeSlide(1)">Next ❯</button>
+ </div>
 </section>
 
 <!-- EDUCATION -->
 <section id="education">
-  <div class="container">
-    <h2 class="section-title">Education & Experience</h2>
-    <p class="section-subtitle">My professional journey</p>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>Education</h3>
-        <p>Add your degree, college name and passing year here.</p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>Professional Experience</h3>
-        <p>Add your company name, job title and experience details here.</p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>Certifications</h3>
-        <p>Add your relevant courses and certifications here.</p>
-      </div>
-    </div>
+ <div class="heading">
+  <h2>Education & Experience</h2>
+ </div>
+ <div class="grid">
+  <div class="card">
+   <div class="icon">🎓</div>
+   <h3>Bachelor of Computer Applications</h3>
+   <p>BCA Graduate</p>
   </div>
+  <div class="card">
+   <div class="icon">💼</div>
+   <h3>MIS Reporting</h3>
+   <p>Experience in MIS reporting and data management.</p>
+  </div>
+ </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <h2 class="section-title">Contact Me</h2>
-    <p class="section-subtitle">Let's connect</p>
+<section id="contact" class="contact">
+ <div class="heading">
+  <h2>Contact Me</h2>
+  <p>Let's Connect</p>
+ </div>
+ <p>📧 Email: tj360790@gmail.com</p>
+ <p>📱 Mobile: +91 8698684553</p>
 
-    <div class="contact-box">
-      <h3>Have a project or opportunity?</h3>
-      <p>Feel free to contact me for professional opportunities and collaboration.</p>
-
-      <!-- Replace with your real email -->
-      <a class="btn" href="mailto:YOUR_EMAIL@gmail.com">
-        Send Email
-      </a>
-
-      <!-- Replace with your real LinkedIn profile -->
-      <a class="btn btn-outline"
-         href="https://www.linkedin.com/"
-         target="_blank" rel="noopener">
-        LinkedIn
-      </a>
-
-      <!-- Replace with your real GitHub profile -->
-      <a class="btn btn-outline"
-         href="https://github.com/"
-         target="_blank" rel="noopener">
-        GitHub
-      </a>
-    </div>
-  </div>
+ <a class="btn" href="mailto:tj360790@gmail.com">Send Email</a>
+ <a class="btn" href="https://wa.me/918698684553" target="_blank">WhatsApp Me</a>
 </section>
 
 <footer>
-  <p>© 2026 Tanmay Jadhav | Data Analyst Portfolio</p>
+ <p>© 2026 Tanmay Jadhav | Data Analyst</p>
+ <p>Power BI • SQL • Excel • MIS Reporting</p>
 </footer>
 
 <script>
 let currentSlide = 0;
+const track = document.getElementById("galleryTrack");
+const total = track.children.length;
 
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
-
-function showSlide(index) {
-  currentSlide = (index + slides.length) % slides.length;
-
-  slides.forEach((slide, i) => {
-    slide.classList.toggle("active", i === currentSlide);
-  });
-
-  dots.forEach((dot, i) => {
-    dot.classList.toggle("active", i === currentSlide);
-  });
+function showSlide(){
+ track.style.transform = "translateX(-" + currentSlide * 100 + "%)";
 }
-
-function changeSlide(direction) {
-  showSlide(currentSlide + direction);
+function changeSlide(direction){
+ currentSlide = (currentSlide + direction + total) % total;
+ showSlide();
 }
-
-function goToSlide(index) {
-  showSlide(index);
-}
-
-setInterval(() => {
-  changeSlide(1);
-}, 4500);
-
-function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("show");
-}
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    document.getElementById("navLinks").classList.remove("show");
-  });
-});
+setInterval(function(){
+ changeSlide(1);
+}, 4000);
 </script>
 
 </body>
