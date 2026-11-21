@@ -4,263 +4,276 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tanmay Jadhav | Data Analyst</title>
+
+<title>Tanmay Jadhav | Data Analyst Portfolio</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #020b18;
-    color: #ffffff;
+body{
+    font-family:Arial, sans-serif;
+    background:#0b1120;
+    color:#ffffff;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
+header{
+    background:#101827;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+    border-bottom:1px solid #243047;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:22px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    min-height:90vh;
+    padding:70px 8%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
     background:
-      linear-gradient(rgba(2,11,24,.91), rgba(2,11,24,.95)),
-      url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=90");
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
+    linear-gradient(rgba(5,12,25,0.88),rgba(5,12,25,0.94)),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+    background-size:cover;
+    background-position:center;
 }
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(2,11,24,.95);
-    border-bottom: 1px solid #123456;
-    padding: 18px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.hero-text{
+    max-width:650px;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #00bfff;
+.hero h1{
+    font-size:52px;
+    margin:15px 0;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    transition: .3s;
+.hero h1 span{
+    color:#38bdf8;
 }
 
-nav a:hover {
-    color: #00bfff;
+.hero h2{
+    color:#94a3b8;
+    font-size:25px;
 }
 
-.hero {
-    min-height: 420px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 10%;
-    background:
-      linear-gradient(90deg, #020b18 20%, rgba(2,11,24,.65)),
-      url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=90");
-    background-position: center;
-    background-size: cover;
-    border-bottom: 1px solid #153e65;
+.hero p{
+    color:#cbd5e1;
+    line-height:1.8;
+    margin:20px 0;
 }
 
-.hero-text h1 {
-    font-size: 55px;
-    margin-bottom: 15px;
+.btn{
+    display:inline-block;
+    background:#0284c7;
+    color:white;
+    padding:13px 24px;
+    border-radius:8px;
+    text-decoration:none;
+    margin-top:15px;
 }
 
-.hero-text h1 span {
-    color: #00aaff;
+.btn:hover{
+    background:#0ea5e9;
 }
 
-.hero-text h2 {
-    color: #00bfff;
-    font-size: 28px;
-    margin-bottom: 15px;
+.profile{
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    border:4px solid #38bdf8;
+    background:#172033;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:80px;
+    flex-shrink:0;
 }
 
-.hero-text p {
-    color: #b9c9da;
-    font-size: 17px;
+section{
+    padding:75px 8%;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 25px;
-    background: #009dff;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    box-shadow: 0 0 20px #008cff66;
-    transition: .3s;
+.section-title{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:40px;
+    color:#38bdf8;
 }
 
-.btn:hover {
-    transform: translateY(-3px);
-    background: #0078ff;
+.about{
+    background:#101827;
 }
 
-section {
-    padding: 45px 10%;
+.about p{
+    color:#cbd5e1;
+    line-height:1.9;
+    max-width:900px;
+    margin:auto;
+    text-align:center;
 }
 
-.section-title {
-    font-size: 30px;
-    margin-bottom: 25px;
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
 }
 
-.section-title span {
-    color: #00bfff;
+.skill{
+    background:#172033;
+    border:1px solid #25354d;
+    padding:25px;
+    text-align:center;
+    border-radius:12px;
+    transition:0.3s;
 }
 
-.about-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 30px;
-    border: 1px solid #153d65;
-    border-radius: 15px;
-    background: rgba(6,20,39,.85);
+.skill:hover{
+    transform:translateY(-5px);
+    border-color:#38bdf8;
 }
 
-.about-text {
-    max-width: 550px;
-    color: #c4d3e5;
-    line-height: 1.8;
+.skill h3{
+    color:#38bdf8;
 }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+.projects{
+    background:#101827;
 }
 
-.skill {
-    padding: 20px 30px;
-    min-width: 140px;
-    text-align: center;
-    background: #0b1d32;
-    border: 1px solid #164c7a;
-    border-radius: 12px;
-    color: #00bfff;
-    font-size: 18px;
-    transition: .3s;
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
-.skill:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 18px #008cff33;
+.project-card{
+    background:#172033;
+    border:1px solid #25354d;
+    border-radius:12px;
+    overflow:hidden;
+    transition:0.3s;
 }
 
-.project {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 25px;
-    padding: 20px;
-    background: rgba(5,18,35,.9);
-    border: 1px solid #15436b;
-    border-radius: 15px;
-    align-items: center;
+.project-card:hover{
+    transform:translateY(-5px);
 }
 
-.project img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 10px;
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    background:#202d40;
 }
 
-.project-info h3 {
-    color: #00bfff;
-    font-size: 25px;
-    margin-bottom: 15px;
+.project-content{
+    padding:22px;
 }
 
-.project-info p {
-    color: #c5d2e0;
-    line-height: 1.7;
+.project-content h3{
+    color:#38bdf8;
+    margin-bottom:12px;
 }
 
-.project-info .tech {
-    margin-top: 15px;
-    color: #00d4ff;
+.project-content p{
+    color:#cbd5e1;
+    line-height:1.7;
 }
 
-.contact-box {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 30px;
-    background: #07172b;
-    border: 1px solid #17456d;
-    border-radius: 15px;
+.project-content a{
+    display:inline-block;
+    margin-top:15px;
+    color:#38bdf8;
+    text-decoration:none;
 }
 
-.contact-box a {
-    color: #00bfff;
-    text-decoration: none;
-    font-size: 17px;
+.education-card{
+    background:#172033;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    max-width:500px;
+    margin:auto;
+    border:1px solid #25354d;
 }
 
-footer {
-    text-align: center;
-    padding: 25px;
-    color: #8da7c2;
-    border-top: 1px solid #123456;
+.education-card h3{
+    color:#38bdf8;
+    margin-bottom:12px;
 }
 
-@media(max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
+.contact{
+    text-align:center;
+    background:#101827;
+}
+
+.contact p{
+    color:#cbd5e1;
+    margin:15px;
+}
+
+.contact a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#070c16;
+    color:#94a3b8;
+}
+
+@media(max-width:800px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
     }
 
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
+    nav a{
+        margin:0 8px;
+        font-size:13px;
     }
 
-    nav a {
-        margin: 0;
-        font-size: 14px;
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
     }
 
-    .hero {
-        padding: 60px 7%;
-        min-height: 350px;
+    .hero h1{
+        font-size:38px;
     }
 
-    .hero-text h1 {
-        font-size: 38px;
-    }
-
-    section {
-        padding: 35px 7%;
-    }
-
-    .project {
-        grid-template-columns: 1fr;
-    }
-
-    .project img {
-        height: 230px;
+    .profile{
+        width:190px;
+        height:190px;
+        font-size:60px;
     }
 }
 </style>
@@ -276,93 +289,220 @@ footer {
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <!-- HOME -->
-<section class="hero" id="home">
-    <div class="hero-text">
-        <h1>Hello, I'm <span>Tanmay</span></h1>
-        <h2>Data Analyst</h2>
-        <p>Power BI | Excel | SQL</p>
-        <p>Turning Data Into Insights</p>
 
-        <a href="#projects" class="btn">View My Dashboard</a>
+<div class="hero" id="home">
+
+    <div class="hero-text">
+        <h2>Hello, I'm</h2>
+
+        <h1>Tanmay <span>Jadhav</span></h1>
+
+        <h2>Data Analyst | MIS Reporting</h2>
+
+        <p>
+            Passionate about data analytics, dashboard development,
+            reporting and transforming raw data into meaningful
+            business insights.
+        </p>
+
+        <a href="#projects" class="btn">View My Projects</a>
     </div>
-</section>
+
+    <div class="profile">
+        📊
+    </div>
+
+</div>
 
 <!-- ABOUT -->
-<section id="about">
-    <h2 class="section-title">About <span>Me</span></h2>
 
-    <div class="about-box">
-        <div class="about-text">
-            Data Analyst passionate about data visualization,
-            business intelligence and analytics.
-            Interested in transforming raw data into meaningful
-            insights using Power BI, Excel and SQL.
-        </div>
-    </div>
+<section class="about" id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <p>
+        I am a BCA graduate with an interest in Data Analytics,
+        MIS Reporting and Business Intelligence.
+        I have knowledge of Power BI, SQL and Excel.
+        I enjoy working with data, creating dashboards,
+        analyzing business performance and presenting
+        meaningful insights through visual reports.
+    </p>
+
 </section>
 
 <!-- SKILLS -->
+
 <section id="skills">
-    <h2 class="section-title">Technical <span>Skills</span></h2>
+
+    <h2 class="section-title">Technical Skills</h2>
 
     <div class="skills">
-        <div class="skill">Power BI</div>
-        <div class="skill">Microsoft Excel</div>
-        <div class="skill">SQL</div>
-        <div class="skill">Data Analytics</div>
-    </div>
-</section>
 
-<!-- PROJECT -->
-<section id="projects">
-    <h2 class="section-title">My <span>Project</span></h2>
+        <div class="skill">
+            <h3>Power BI</h3>
+            <p>Dashboard Development</p>
+        </div>
 
-    <div class="project">
+        <div class="skill">
+            <h3>SQL</h3>
+            <p>Data Query & Analysis</p>
+        </div>
 
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=90"
-             alt="Power BI Data Analytics Dashboard">
+        <div class="skill">
+            <h3>Microsoft Excel</h3>
+            <p>Data Management & Reporting</p>
+        </div>
 
-        <div class="project-info">
-            <h3>Power BI Dashboard</h3>
+        <div class="skill">
+            <h3>Data Analytics</h3>
+            <p>Data Insights</p>
+        </div>
 
-            <p>
-                Interactive business dashboard created to analyze
-                sales performance, trends, KPIs and business insights
-                through data visualization.
-            </p>
+        <div class="skill">
+            <h3>MIS Reporting</h3>
+            <p>Business Reports</p>
+        </div>
 
-            <p class="tech">
-                Power BI | Data Visualization | Analytics
-            </p>
+        <div class="skill">
+            <h3>Data Visualization</h3>
+            <p>Charts & KPI Analysis</p>
         </div>
 
     </div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section class="projects" id="projects">
+
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="project-grid">
+
+        <!-- PROJECT 1 -->
+
+        <div class="project-card">
+
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+                 alt="Data Analytics Dashboard">
+
+            <div class="project-content">
+
+                <h3>Starbucks Sales Dashboard</h3>
+
+                <p>
+                    Developed an interactive Power BI dashboard
+                    to analyze sales performance, product trends,
+                    business KPIs and customer insights.
+                </p>
+
+                <a href="#">Power BI Project</a>
+
+            </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+
+        <div class="project-card">
+
+            <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4"
+                 alt="Data Visualization">
+
+            <div class="project-content">
+
+                <h3>SQL Data Analytics</h3>
+
+                <p>
+                    Used SQL queries for data extraction,
+                    filtering, analysis and identifying
+                    meaningful business insights.
+                </p>
+
+                <a href="#">SQL Analysis</a>
+
+            </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+
+        <div class="project-card">
+
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+                 alt="Business Reporting Dashboard">
+
+            <div class="project-content">
+
+                <h3>MIS Reporting</h3>
+
+                <p>
+                    Created structured reports and analytical
+                    summaries to support business monitoring,
+                    performance tracking and decision making.
+                </p>
+
+                <a href="#">Reporting Project</a>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+    <h2 class="section-title">Education</h2>
+
+    <div class="education-card">
+
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+
+        <p>Graduation Year: 2022</p>
+
+        <p>Computer Applications & Technology</p>
+
+    </div>
+
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-    <h2 class="section-title">Contact <span>Me</span></h2>
 
-    <div class="contact-box">
+<section class="contact" id="contact">
 
+    <h2 class="section-title">Contact Me</h2>
+
+    <p>Email:
         <a href="mailto:tj360790@gmail.com">
-            ✉ tj360790@gmail.com
+        tj360790@gmail.com
         </a>
+    </p>
 
-        <a href="tel:+918698684553">
-            ☎ +91 8698684553
+    <p>Mobile:
+        <a href="tel:8698684553">
+        8698684553
         </a>
+    </p>
 
-    </div>
+    <a class="btn" href="mailto:tj360790@gmail.com">
+        Send Email
+    </a>
+
 </section>
 
 <footer>
-    © 2026 Tanmay Jadhav | Data Analyst Portfolio
+
+    <p>© 2026 Tanmay Jadhav | Data Analyst Portfolio</p>
+
 </footer>
 
 </body>
