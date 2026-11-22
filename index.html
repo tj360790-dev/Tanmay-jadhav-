@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="google-site-verification" content="_AoUXYDa1WoiapcFyT4T3rKFFwNwkAWEDrHTU0ekcug">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Tanmay Jadhav | Data Analyst Portfolio</title>
 
 <style>
@@ -11,88 +13,100 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
 body{
     font-family:Arial,sans-serif;
-    background:#030914;
-    color:white;
+    background:#020817;
+    color:#fff;
     overflow-x:hidden;
 }
 
-/* FULL PAGE TECHNICAL BACKGROUND */
+/* FULL PAGE TECH BACKGROUND */
 body::before{
     content:"";
     position:fixed;
     inset:0;
+    z-index:-2;
+
     background:
-      linear-gradient(rgba(2,8,20,0.86),rgba(2,8,20,0.93)),
-      url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+    linear-gradient(rgba(2,8,22,0.82),rgba(2,8,22,0.92)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
-    z-index:-2;
 }
 
-/* TECH GRID OVERLAY */
+/* TECH GRID */
 body::after{
     content:"";
     position:fixed;
     inset:0;
-    background-image:
-      linear-gradient(rgba(56,189,248,0.035) 1px,transparent 1px),
-      linear-gradient(90deg,rgba(56,189,248,0.035) 1px,transparent 1px);
-    background-size:40px 40px;
-    pointer-events:none;
     z-index:-1;
+    pointer-events:none;
+
+    background-image:
+    linear-gradient(rgba(0,180,255,0.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,180,255,0.05) 1px,transparent 1px);
+
+    background-size:40px 40px;
 }
 
+/* NAVBAR */
 header{
-    padding:20px 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    padding:18px 5%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    flex-wrap:wrap;
-    background:rgba(3,9,20,0.88);
-    border-bottom:1px solid #16476c;
-    position:sticky;
-    top:0;
-    z-index:100;
+    gap:20px;
+
+    background:rgba(2,8,22,0.88);
     backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(0,174,255,0.3);
 }
 
 .logo{
-    font-size:25px;
+    font-size:24px;
     font-weight:bold;
-    color:#38bdf8;
+    color:#00c8ff;
 }
 
 nav{
     display:flex;
     flex-wrap:wrap;
-    gap:20px;
+    gap:22px;
 }
 
 nav a{
-    color:#e2e8f0;
     text-decoration:none;
+    color:#e2e8f0;
     font-size:14px;
     transition:0.3s;
 }
 
 nav a:hover{
-    color:#38bdf8;
+    color:#00c8ff;
 }
 
 /* HERO */
 .hero{
-    min-height:90vh;
-    padding:70px 8%;
+    min-height:650px;
+    padding:70px 5%;
+
     display:grid;
-    grid-template-columns:1.2fr 1fr;
+    grid-template-columns:1fr 1.15fr;
     align-items:center;
-    gap:45px;
+    gap:40px;
 }
 
 .hero-text{
@@ -101,196 +115,334 @@ nav a:hover{
 
 .tag{
     display:inline-block;
-    padding:10px 16px;
-    border:1px solid #0284c7;
+    border:1px solid #00aaff;
     border-radius:30px;
-    color:#38bdf8;
-    background:rgba(14,165,233,0.10);
+    padding:10px 17px;
+
+    color:#00d4ff;
+    background:rgba(0,150,255,0.1);
 }
 
 .hero h1{
-    font-size:60px;
-    margin:22px 0;
+    font-size:65px;
+    margin:22px 0 10px;
+    line-height:1.1;
 }
 
 .hero h1 span{
-    color:#38bdf8;
+    color:#00c8ff;
 }
 
 .hero h2{
-    color:#94a3b8;
-    font-size:25px;
+    font-size:26px;
+    color:#a5c5e5;
 }
 
 .hero p{
-    color:#cbd5e1;
-    line-height:1.9;
+    color:#d0deed;
+    line-height:1.8;
     margin:20px 0;
+}
+
+.tools{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:22px;
+}
+
+.tool{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    padding:10px 14px;
+    border:1px solid rgba(0,174,255,0.45);
+    border-radius:12px;
+
+    background:rgba(8,24,48,0.85);
+    color:#eaf7ff;
+    font-size:14px;
+}
+
+.tool span{
+    color:#00c8ff;
+    font-weight:bold;
 }
 
 .btn{
     display:inline-block;
-    background:#0284c7;
-    color:white;
-    padding:13px 23px;
-    border-radius:8px;
+    padding:13px 22px;
+    margin:15px 8px 0 0;
+
+    background:linear-gradient(90deg,#008bff,#00d4ff);
+    border-radius:30px;
+
     text-decoration:none;
-    margin:10px 8px 0 0;
+    color:white;
+    font-weight:bold;
+
     transition:0.3s;
+    box-shadow:0 0 18px rgba(0,174,255,0.25);
 }
 
 .btn:hover{
-    background:#38bdf8;
     transform:translateY(-3px);
-    box-shadow:0 0 20px #0284c755;
+    box-shadow:0 0 25px rgba(0,174,255,0.5);
 }
 
-.hero-image{
-    padding:12px;
-    background:rgba(9,20,38,0.72);
-    border:1px solid #16476c;
-    border-radius:20px;
-    box-shadow:0 0 35px rgba(14,165,233,0.16);
-    backdrop-filter:blur(10px);
+.btn-outline{
+    background:rgba(3,14,30,0.8);
+    border:1px solid #00aaff;
 }
 
-.hero-image img{
+/* 3D DASHBOARD SLIDER */
+.slider-area{
+    position:relative;
+    perspective:1400px;
+    min-height:440px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.dashboard-frame{
+    position:relative;
     width:100%;
-    height:360px;
-    object-fit:cover;
-    border-radius:14px;
+    max-width:650px;
+    height:390px;
+
+    transform-style:preserve-3d;
+    transform:rotateY(-9deg) rotateX(4deg);
+
+    transition:transform 0.7s ease;
 }
 
-/* SECTION FORMAT */
+.dashboard-frame:hover{
+    transform:rotateY(0deg) rotateX(0deg) scale(1.02);
+}
+
+.dashboard-card{
+    position:absolute;
+    inset:0;
+
+    border:1px solid rgba(0,190,255,0.7);
+    border-radius:20px;
+    overflow:hidden;
+
+    background:#071529;
+
+    box-shadow:
+    0 0 25px rgba(0,153,255,0.3),
+    0 25px 65px rgba(0,0,0,0.55);
+
+    opacity:0;
+    transform:translateX(60px) rotateY(-12deg) scale(0.92);
+
+    transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.dashboard-card.active{
+    opacity:1;
+    transform:translateX(0) rotateY(0) scale(1);
+    z-index:2;
+}
+
+.dashboard-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+/* CAROUSEL BUTTONS */
+.slider-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:10;
+
+    width:44px;
+    height:44px;
+
+    border-radius:50%;
+    border:1px solid #00c8ff;
+
+    background:rgba(0,10,30,0.9);
+    color:#fff;
+
+    font-size:24px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.slider-btn:hover{
+    background:#009dff;
+    box-shadow:0 0 18px #00aaff;
+}
+
+.prev{
+    left:-15px;
+}
+
+.next{
+    right:-15px;
+}
+
+.dots{
+    position:absolute;
+    bottom:5px;
+
+    display:flex;
+    gap:10px;
+    z-index:10;
+}
+
+.dot{
+    width:11px;
+    height:11px;
+    border-radius:50%;
+    border:none;
+    background:#66809c;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.dot.active{
+    background:#00c8ff;
+    box-shadow:0 0 12px #00c8ff;
+    transform:scale(1.2);
+}
+
+/* SECTION */
 section{
-    padding:75px 8%;
+    padding:70px 5%;
 }
 
 .section-title{
     text-align:center;
-    font-size:36px;
-    color:#38bdf8;
+    font-size:35px;
     margin-bottom:40px;
 }
 
-.panel{
-    background:rgba(7,17,32,0.76);
-    border:1px solid rgba(56,189,248,0.23);
+.section-title span{
+    color:#00c8ff;
+}
+
+.glass{
+    background:rgba(4,15,32,0.78);
+    border:1px solid rgba(0,174,255,0.25);
     border-radius:18px;
-    padding:35px;
     backdrop-filter:blur(12px);
+
     box-shadow:0 0 25px rgba(0,0,0,0.2);
 }
 
 /* ABOUT */
-.about p{
+.about-box{
+    padding:35px;
+    text-align:center;
+}
+
+.about-box p{
     max-width:950px;
     margin:auto;
-    text-align:center;
+    color:#d0deed;
     line-height:2;
-    color:#d1d9e6;
     font-size:16px;
 }
 
-/* TECHNICAL SKILLS */
-.skills{
+/* SKILLS */
+.skills-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:22px;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.skill{
-    padding:30px 20px;
-    background:rgba(8,19,36,0.84);
-    border:1px solid rgba(56,189,248,0.25);
-    border-radius:18px;
+.skill-card{
+    padding:25px;
     text-align:center;
-    backdrop-filter:blur(12px);
-    transition:0.3s;
+    transition:0.35s;
 }
 
-.skill:hover{
-    transform:translateY(-8px);
-    border-color:#38bdf8;
-    box-shadow:0 0 25px rgba(56,189,248,0.18);
+.skill-card:hover{
+    transform:translateY(-7px);
+    border-color:#00c8ff;
+    box-shadow:0 0 22px rgba(0,174,255,0.18);
 }
 
-.skill img{
-    width:65px;
-    height:65px;
-    object-fit:contain;
-    margin-bottom:18px;
-}
-
-.skill h3{
-    color:#38bdf8;
+.skill-icon{
+    font-size:38px;
     margin-bottom:12px;
-    font-size:22px;
 }
 
-.skill p{
-    color:#cbd5e1;
+.skill-card h3{
+    color:#00c8ff;
+    margin-bottom:10px;
+}
+
+.skill-card p{
+    color:#c5d5e5;
     font-size:14px;
     line-height:1.7;
 }
 
-/* PROJECT DASHBOARDS */
-.project-grid{
+/* PROJECTS */
+.projects-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:28px;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
 .project-card{
-    background:rgba(7,17,32,0.88);
-    border:1px solid rgba(56,189,248,0.25);
-    border-radius:18px;
     overflow:hidden;
-    backdrop-filter:blur(12px);
     transition:0.3s;
 }
 
 .project-card:hover{
     transform:translateY(-6px);
-    border-color:#38bdf8;
-    box-shadow:0 0 28px rgba(56,189,248,0.14);
+    border-color:#00c8ff;
+    box-shadow:0 0 22px rgba(0,174,255,0.15);
 }
 
 .project-card img{
     width:100%;
-    height:280px;
+    height:220px;
     object-fit:cover;
     display:block;
 }
 
 .project-content{
-    padding:26px;
+    padding:22px;
 }
 
 .project-content h3{
-    color:#38bdf8;
-    margin-bottom:14px;
-    font-size:22px;
+    color:#00c8ff;
+    margin-bottom:12px;
 }
 
 .project-content p{
-    color:#cbd5e1;
+    color:#d0deed;
     line-height:1.8;
+    font-size:14px;
 }
 
-.project-tech{
+.project-tags{
     display:flex;
     flex-wrap:wrap;
     gap:8px;
-    margin-top:18px;
+    margin-top:15px;
 }
 
-.project-tech span{
-    background:rgba(14,165,233,0.10);
-    border:1px solid rgba(56,189,248,0.25);
+.project-tags span{
     color:#7dd3fc;
+    border:1px solid rgba(0,174,255,0.3);
+    background:rgba(0,174,255,0.08);
+    padding:6px 10px;
     border-radius:20px;
-    padding:7px 12px;
     font-size:12px;
 }
 
@@ -298,42 +450,36 @@ section{
 .education-card{
     max-width:650px;
     margin:auto;
-    text-align:center;
     padding:35px;
-    background:rgba(7,17,32,0.84);
-    border:1px solid rgba(56,189,248,0.25);
-    border-radius:18px;
-    backdrop-filter:blur(12px);
+    text-align:center;
 }
 
 .education-card h3{
-    color:#38bdf8;
-    font-size:24px;
+    color:#00c8ff;
     margin-bottom:15px;
+    font-size:23px;
 }
 
 .education-card p{
-    color:#cbd5e1;
     line-height:2;
+    color:#d0deed;
 }
 
 /* CONTACT */
-.contact-box{
+.contact-card{
+    max-width:850px;
+    margin:auto;
+    padding:35px;
     text-align:center;
-    background:rgba(7,17,32,0.84);
-    border:1px solid rgba(56,189,248,0.25);
-    padding:40px;
-    border-radius:18px;
-    backdrop-filter:blur(12px);
 }
 
-.contact-box p{
-    margin:18px;
-    color:#cbd5e1;
+.contact-card p{
+    margin:20px 0;
+    color:#d0deed;
 }
 
-.contact-box a:not(.btn){
-    color:#38bdf8;
+.contact-card a:not(.btn){
+    color:#00c8ff;
     text-decoration:none;
 }
 
@@ -341,29 +487,34 @@ section{
 footer{
     padding:25px;
     text-align:center;
-    background:rgba(2,6,15,0.95);
+    background:rgba(1,5,14,0.95);
+    border-top:1px solid rgba(0,174,255,0.3);
     color:#94a3b8;
-    border-top:1px solid #16476c;
+    line-height:2;
 }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-
-    .skills{
-        grid-template-columns:repeat(2,1fr);
-    }
+/* MOBILE */
+@media(max-width:950px){
 
     .hero{
         grid-template-columns:1fr;
         text-align:center;
     }
 
-    .hero h1{
-        font-size:45px;
+    .tools{
+        justify-content:center;
     }
 
-    .project-grid{
-        grid-template-columns:1fr;
+    .skills-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .projects-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h1{
+        font-size:48px;
     }
 }
 
@@ -371,29 +522,55 @@ footer{
 
     header{
         flex-direction:column;
-        gap:18px;
+        gap:16px;
     }
 
     nav{
         justify-content:center;
-        gap:12px;
+        gap:14px;
     }
 
-    .skills{
-        grid-template-columns:1fr 1fr;
-        gap:12px;
+    nav a{
+        font-size:12px;
     }
 
-    .skill{
-        padding:20px 12px;
+    .hero{
+        padding-top:50px;
     }
 
     .hero h1{
-        font-size:36px;
+        font-size:38px;
     }
 
-    .hero-image img{
-        height:240px;
+    .hero h2{
+        font-size:20px;
+    }
+
+    .slider-area{
+        min-height:280px;
+    }
+
+    .dashboard-frame{
+        height:250px;
+    }
+
+    .slider-btn{
+        width:35px;
+        height:35px;
+        font-size:18px;
+    }
+
+    .prev{
+        left:-10px;
+    }
+
+    .next{
+        right:-10px;
+    }
+
+    .skills-grid,
+    .projects-grid{
+        grid-template-columns:1fr;
     }
 
     section{
@@ -401,11 +578,7 @@ footer{
     }
 
     .section-title{
-        font-size:29px;
-    }
-
-    .project-card img{
-        height:220px;
+        font-size:28px;
     }
 }
 </style>
@@ -413,25 +586,28 @@ footer{
 
 <body>
 
+<!-- NAVBAR -->
 <header>
-    <div class="logo">Tanmay Jadhav</div>
+
+    <div class="logo">📊 Tanmay Jadhav</div>
 
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#projects">Dashboards</a>
+        <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
     </nav>
+
 </header>
 
-<!-- HOME -->
+<!-- HERO SECTION -->
 <div class="hero" id="home">
 
     <div class="hero-text">
 
-        <span class="tag">DATA ANALYTICS • BUSINESS INTELLIGENCE</span>
+        <span class="tag">✦ DATA ANALYTICS PORTFOLIO</span>
 
         <h1>Tanmay <span>Jadhav</span></h1>
 
@@ -439,20 +615,56 @@ footer{
 
         <p>
             Turning raw data into meaningful insights through
-            SQL, Python, Power BI and Advanced Excel.
-            Interested in data visualization, business analysis,
+            SQL, Python, Advanced Excel and Power BI.
+            Focused on data analytics, business intelligence,
             reporting and dashboard development.
         </p>
 
-        <a href="#projects" class="btn">Explore Dashboards</a>
-        <a href="#contact" class="btn">Contact Me</a>
+        <!-- SKILL SHORTCUTS -->
+        <div class="tools">
+            <div class="tool"><span>▤</span> SQL</div>
+            <div class="tool"><span>🐍</span> Python</div>
+            <div class="tool"><span>▦</span> Advanced Excel</div>
+            <div class="tool"><span>▥</span> Power BI</div>
+        </div>
+
+        <a href="#projects" class="btn">🚀 Explore My Projects</a>
+        <a href="#contact" class="btn btn-outline">✉ Contact Me</a>
 
     </div>
 
-    <div class="hero-image">
+    <!-- 3D AUTO DASHBOARD -->
+    <div class="slider-area">
 
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
-             alt="Data Analytics Dashboard">
+        <button class="slider-btn prev" onclick="previousSlide()">‹</button>
+
+        <div class="dashboard-frame" id="dashboardFrame">
+
+            <div class="dashboard-card active">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+                     alt="Power BI Analytics Dashboard">
+            </div>
+
+            <div class="dashboard-card">
+                <img src="sql-dashboard.jpg"
+                     alt="SQL Dashboard">
+            </div>
+
+            <div class="dashboard-card">
+                <img src="excel-dashboard.jpg"
+                     alt="Excel Dashboard">
+            </div>
+
+            <div class="dashboard-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+                     alt="Data Analytics Dashboard">
+            </div>
+
+        </div>
+
+        <button class="slider-btn next" onclick="nextSlide()">›</button>
+
+        <div class="dots" id="dots"></div>
 
     </div>
 
@@ -461,18 +673,18 @@ footer{
 <!-- ABOUT -->
 <section id="about">
 
-    <h2 class="section-title">About Me</h2>
+    <h2 class="section-title">About <span>Me</span></h2>
 
-    <div class="panel about">
+    <div class="glass about-box">
 
         <p>
-            I am a BCA graduate with an interest in Data Analytics,
-            Business Intelligence and MIS Reporting. I work with SQL,
-            Python, Advanced Excel and Power BI concepts to analyze
-            data, prepare reports, identify trends and create
-            meaningful business dashboards. My goal is to transform
-            complex data into clear information that supports
-            effective business decision-making.
+            I am a BCA graduate interested in Data Analytics,
+            Business Intelligence and MIS Reporting. I work with
+            SQL, Python, Advanced Excel and Power BI to analyze
+            data, create dashboards, track business performance
+            and transform raw data into useful insights.
+            I am passionate about data visualization,
+            analytical reporting and business decision-making.
         </p>
 
     </div>
@@ -482,133 +694,128 @@ footer{
 <!-- SKILLS -->
 <section id="skills">
 
-    <h2 class="section-title">Technical Skills</h2>
+    <h2 class="section-title">Technical <span>Skills</span></h2>
 
-    <div class="skills">
+    <div class="skills-grid">
 
-        <div class="skill">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-            <h3>Python</h3>
-            <p>Data Analysis, Pandas, Data Cleaning, Automation</p>
-        </div>
-
-        <div class="skill">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
-            <h3>SQL</h3>
-            <p>Queries, Joins, Filtering, Aggregations, Data Extraction</p>
-        </div>
-
-        <div class="skill">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="Advanced Excel">
-            <h3>Advanced Excel</h3>
-            <p>Pivot Tables, XLOOKUP, VLOOKUP, Power Query, Charts</p>
-        </div>
-
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI">
+        <div class="skill-card glass">
+            <div class="skill-icon">📊</div>
             <h3>Power BI</h3>
-            <p>Interactive Dashboards, DAX, KPI, Data Visualization</p>
+            <p>Interactive dashboards, KPI reporting, DAX and data visualization.</p>
+        </div>
+
+        <div class="skill-card glass">
+            <div class="skill-icon">🗄️</div>
+            <h3>SQL</h3>
+            <p>Data extraction, joins, queries, filtering and aggregations.</p>
+        </div>
+
+        <div class="skill-card glass">
+            <div class="skill-icon">🐍</div>
+            <h3>Python</h3>
+            <p>Data analysis, Pandas, data cleaning and automation.</p>
+        </div>
+
+        <div class="skill-card glass">
+            <div class="skill-icon">📗</div>
+            <h3>Advanced Excel</h3>
+            <p>Pivot Tables, XLOOKUP, VLOOKUP, Power Query and reporting.</p>
+        </div>
+
+        <div class="skill-card glass">
+            <div class="skill-icon">📈</div>
+            <h3>Data Analytics</h3>
+            <p>Trend analysis, business insights and data-driven decisions.</p>
+        </div>
+
+        <div class="skill-card glass">
+            <div class="skill-icon">📑</div>
+            <h3>MIS Reporting</h3>
+            <p>Performance tracking, reports and business information management.</p>
         </div>
 
     </div>
 
 </section>
 
-<!-- DASHBOARD PROJECTS -->
+<!-- PROJECTS -->
 <section id="projects">
 
-    <h2 class="section-title">Dashboard & Analytics Projects</h2>
+    <h2 class="section-title">Featured <span>Projects</span></h2>
 
-    <div class="project-grid">
+    <div class="projects-grid">
 
-        <div class="project-card">
+        <div class="project-card glass">
 
             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
-                 alt="Starbucks Dashboard">
+                 alt="Starbucks Sales Dashboard">
 
             <div class="project-content">
-                <h3>Starbucks Sales Analytics</h3>
+
+                <h3>Starbucks Sales Dashboard</h3>
 
                 <p>
-                    Business dashboard showcasing sales analysis,
-                    performance metrics, product trends and
-                    data-driven insights.
+                    Sales performance analysis, product insights,
+                    customer trends and business KPIs through
+                    interactive Power BI visualizations.
                 </p>
 
-                <div class="project-tech">
+                <div class="project-tags">
                     <span>Power BI</span>
                     <span>Excel</span>
                     <span>Analytics</span>
                 </div>
+
             </div>
 
         </div>
 
-        <div class="project-card">
+        <div class="project-card glass">
 
-            <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4"
-                 alt="SQL Analytics Dashboard">
+            <img src="sql-dashboard.jpg"
+                 alt="SQL Data Analytics Project">
 
             <div class="project-content">
-                <h3>SQL Data Analysis</h3>
+
+                <h3>SQL Data Analytics</h3>
 
                 <p>
-                    Data exploration, structured queries,
-                    joins and business analysis using
-                    SQL-based data operations.
+                    Data extraction, query analysis,
+                    database operations and business
+                    insights using SQL.
                 </p>
 
-                <div class="project-tech">
+                <div class="project-tags">
                     <span>SQL</span>
                     <span>Database</span>
-                    <span>Data Analysis</span>
+                    <span>Analysis</span>
                 </div>
+
             </div>
 
         </div>
 
-        <div class="project-card">
+        <div class="project-card glass">
 
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
-                 alt="Power BI Business Dashboard">
+            <img src="excel-dashboard.jpg"
+                 alt="Advanced Excel Dashboard">
 
             <div class="project-content">
-                <h3>Business Performance Dashboard</h3>
+
+                <h3>Advanced Excel Dashboard</h3>
 
                 <p>
-                    KPI reporting, visual analytics,
-                    business performance monitoring
-                    and interactive dashboard design.
+                    Interactive reporting, Pivot Tables,
+                    data analysis, charts and Excel-based
+                    business performance tracking.
                 </p>
 
-                <div class="project-tech">
-                    <span>Power BI</span>
-                    <span>DAX</span>
+                <div class="project-tags">
+                    <span>Excel</span>
+                    <span>Reporting</span>
                     <span>Dashboard</span>
                 </div>
-            </div>
 
-        </div>
-
-        <div class="project-card">
-
-            <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0"
-                 alt="Python Data Analysis">
-
-            <div class="project-content">
-                <h3>Python Data Analytics</h3>
-
-                <p>
-                    Data processing, data cleaning,
-                    exploratory analysis and analytical
-                    insights using Python.
-                </p>
-
-                <div class="project-tech">
-                    <span>Python</span>
-                    <span>Pandas</span>
-                    <span>Data Cleaning</span>
-                </div>
             </div>
 
         </div>
@@ -620,13 +827,13 @@ footer{
 <!-- EDUCATION -->
 <section id="education">
 
-    <h2 class="section-title">Education</h2>
+    <h2 class="section-title">My <span>Education</span></h2>
 
-    <div class="education-card">
+    <div class="education-card glass">
 
         <h3>Bachelor of Computer Applications (BCA)</h3>
 
-        <p>Graduation Year: 2022</p>
+        <p>🎓 Graduation Year: 2022</p>
 
         <p>Computer Applications</p>
 
@@ -637,33 +844,105 @@ footer{
 <!-- CONTACT -->
 <section id="contact">
 
-    <h2 class="section-title">Contact Me</h2>
+    <h2 class="section-title">Contact <span>Me</span></h2>
 
-    <div class="contact-box">
+    <div class="contact-card glass">
 
-        <p>Email:
-            <a href="mailto:tj360790@gmail.com">
-            tj360790@gmail.com
-            </a>
+        <p>📧 Email:
+            <a href="mailto:tj360790@gmail.com">tj360790@gmail.com</a>
         </p>
 
-        <p>Mobile:
-            <a href="tel:8698684553">
-            8698684553
-            </a>
+        <p>📱 Mobile:
+            <a href="tel:8698684553">8698684553</a>
         </p>
 
-        <a class="btn" href="mailto:tj360790@gmail.com">
-            Get In Touch
+        <a href="mailto:tj360790@gmail.com" class="btn">
+            Send Email
         </a>
 
     </div>
 
 </section>
 
+<!-- FOOTER -->
 <footer>
-    © 2026 Tanmay Jadhav | Data Analyst Portfolio
+
+    <p>© 2026 Tanmay Jadhav | Data Analyst Portfolio</p>
+
+    <p>Analyze • Visualize • Grow</p>
+
 </footer>
+
+<!-- AUTO CHANGE DASHBOARD EVERY 3 SECONDS -->
+<script>
+
+const cards = document.querySelectorAll(".dashboard-card");
+const dotsContainer = document.getElementById("dots");
+
+let currentSlide = 0;
+let autoPlay;
+
+/* CREATE DOTS */
+cards.forEach((card,index)=>{
+
+    const dot = document.createElement("button");
+
+    dot.className = "dot" + (index === 0 ? " active" : "");
+
+    dot.setAttribute("aria-label","Show dashboard " + (index + 1));
+
+    dot.onclick = ()=>showSlide(index);
+
+    dotsContainer.appendChild(dot);
+
+});
+
+/* SHOW SLIDE */
+function showSlide(index){
+
+    cards[currentSlide].classList.remove("active");
+    dotsContainer.children[currentSlide].classList.remove("active");
+
+    currentSlide = (index + cards.length) % cards.length;
+
+    cards[currentSlide].classList.add("active");
+    dotsContainer.children[currentSlide].classList.add("active");
+
+}
+
+/* NEXT */
+function nextSlide(){
+    showSlide(currentSlide + 1);
+    restartAutoPlay();
+}
+
+/* PREVIOUS */
+function previousSlide(){
+    showSlide(currentSlide - 1);
+    restartAutoPlay();
+}
+
+/* AUTO PLAY - 3 SECONDS */
+function startAutoPlay(){
+
+    autoPlay = setInterval(()=>{
+        showSlide(currentSlide + 1);
+    },3000);
+
+}
+
+/* RESET TIMER */
+function restartAutoPlay(){
+
+    clearInterval(autoPlay);
+    startAutoPlay();
+
+}
+
+/* START */
+startAutoPlay();
+
+</script>
 
 </body>
 </html>
