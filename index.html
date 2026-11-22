@@ -3,582 +3,598 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="google-site-verification" content="_AoUXYDa1WoiapcFyT4T3rKFFwNwkAWEDrHTU0ekcug">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Tanmay Jadhav | Data Analyst Portfolio</title>
+<title>Tanmay Jadhav | Data Analyst</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-html{
-    scroll-behavior:smooth;
+body {
+    background: #06101f;
+    color: #f1f5ff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
-body{
-    font-family:Arial,sans-serif;
-    background:#020817;
-    color:#fff;
-    overflow-x:hidden;
+:root {
+    --blue: #00c8ff;
+    --blue2: #4285ff;
+    --bg: #06101f;
+    --card: #0b192c;
+    --border: rgba(0,200,255,.25);
 }
 
-/* FULL PAGE TECH BACKGROUND */
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    z-index:-2;
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
+nav {
+    height: 72px;
+    padding: 0 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: rgba(4,12,25,.94);
+    backdrop-filter: blur(15px);
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul a {
+    color: #cbd5e1;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav ul a:hover {
+    color: var(--blue);
+}
+
+.hero {
+    min-height: 560px;
+    padding: 65px 5%;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
     background:
-    linear-gradient(rgba(2,8,22,0.82),rgba(2,8,22,0.92)),
-    url("https://images.unsplash.com/photo-1518770660439-4636190af475");
-
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
+    radial-gradient(circle at 20% 50%, rgba(0,140,255,.15), transparent 45%),
+    linear-gradient(120deg,#06101f,#07172a,#04101e);
 }
 
-/* TECH GRID */
-body::after{
-    content:"";
-    position:fixed;
-    inset:0;
-    z-index:-1;
-    pointer-events:none;
-
-    background-image:
-    linear-gradient(rgba(0,180,255,0.05) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(0,180,255,0.05) 1px,transparent 1px);
-
-    background-size:40px 40px;
+.hero::before {
+    content: "SELECT * FROM DATA   •   PYTHON   •   SQL   •   POWER BI";
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    color: rgba(0,200,255,.07);
+    font-size: 30px;
+    font-weight: 800;
+    white-space: nowrap;
+    pointer-events: none;
 }
 
-/* NAVBAR */
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-
-    padding:18px 5%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-
-    background:rgba(2,8,22,0.88);
-    backdrop-filter:blur(15px);
-
-    border-bottom:1px solid rgba(0,174,255,0.3);
+.hero::after {
+    content: "010101  ANALYTICS  101010  DATA  010101";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: rgba(0,200,255,.05);
+    font-size: 36px;
+    white-space: nowrap;
 }
 
-.logo{
-    font-size:24px;
-    font-weight:bold;
-    color:#00c8ff;
+.hero-content {
+    z-index: 2;
 }
 
-nav{
-    display:flex;
-    flex-wrap:wrap;
-    gap:22px;
+.tag {
+    color: var(--blue);
+    border: 1px solid var(--border);
+    padding: 9px 16px;
+    display: inline-block;
+    border-radius: 30px;
+    font-size: 13px;
+    margin-bottom: 25px;
+    background: rgba(0,200,255,.05);
 }
 
-nav a{
-    text-decoration:none;
-    color:#e2e8f0;
-    font-size:14px;
-    transition:0.3s;
+.hero h1 {
+    font-size: clamp(40px,5vw,70px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    letter-spacing: -2px;
 }
 
-nav a:hover{
-    color:#00c8ff;
+.hero h1 span {
+    color: var(--blue);
 }
 
-/* HERO */
-.hero{
-    min-height:650px;
-    padding:70px 5%;
-
-    display:grid;
-    grid-template-columns:1fr 1.15fr;
-    align-items:center;
-    gap:40px;
+.hero h2 {
+    font-size: 21px;
+    color: #dbeafe;
+    margin-bottom: 20px;
 }
 
-.hero-text{
-    max-width:650px;
+.hero p {
+    color: #9fb1c8;
+    line-height: 1.8;
+    max-width: 480px;
+    margin-bottom: 30px;
 }
 
-.tag{
-    display:inline-block;
-    border:1px solid #00aaff;
-    border-radius:30px;
-    padding:10px 17px;
-
-    color:#00d4ff;
-    background:rgba(0,150,255,0.1);
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-.hero h1{
-    font-size:65px;
-    margin:22px 0 10px;
-    line-height:1.1;
+.btn {
+    padding: 14px 25px;
+    border-radius: 30px;
+    display: inline-block;
+    font-weight: 600;
+    transition: .3s;
 }
 
-.hero h1 span{
-    color:#00c8ff;
+.primary {
+    background: linear-gradient(90deg,#00bfff,#347cff);
+    color: white;
+    box-shadow: 0 0 25px rgba(0,180,255,.2);
 }
 
-.hero h2{
-    font-size:26px;
-    color:#a5c5e5;
+.secondary {
+    border: 1px solid #4a6585;
 }
 
-.hero p{
-    color:#d0deed;
-    line-height:1.8;
-    margin:20px 0;
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0,200,255,.3);
 }
 
-.tools{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:22px;
+/* Dashboard showcase */
+
+.dashboard-box {
+    width: 100%;
+    min-height: 390px;
+    border: 2px solid #00bfff;
+    border-radius: 22px;
+    padding: 15px;
+    background: #091526;
+    box-shadow: 0 0 35px rgba(0,150,255,.2);
+    position: relative;
+    z-index: 2;
+    transition: .3s;
 }
 
-.tool{
-    display:flex;
-    align-items:center;
-    gap:8px;
-
-    padding:10px 14px;
-    border:1px solid rgba(0,174,255,0.45);
-    border-radius:12px;
-
-    background:rgba(8,24,48,0.85);
-    color:#eaf7ff;
-    font-size:14px;
+.dashboard-box:hover {
+    box-shadow: 0 0 45px rgba(0,200,255,.3);
 }
 
-.tool span{
-    color:#00c8ff;
-    font-weight:bold;
+.dash-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.btn{
-    display:inline-block;
-    padding:13px 22px;
-    margin:15px 8px 0 0;
-
-    background:linear-gradient(90deg,#008bff,#00d4ff);
-    border-radius:30px;
-
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
-
-    transition:0.3s;
-    box-shadow:0 0 18px rgba(0,174,255,0.25);
+.dash-top h3 {
+    font-size: 18px;
 }
 
-.btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 0 25px rgba(0,174,255,0.5);
+.dash-top small {
+    color: var(--blue);
 }
 
-.btn-outline{
-    background:rgba(3,14,30,0.8);
-    border:1px solid #00aaff;
+.dash-slide {
+    display: none;
+    animation: fade .5s ease;
 }
 
-/* 3D DASHBOARD SLIDER */
-.slider-area{
-    position:relative;
-    perspective:1400px;
-    min-height:440px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.dash-slide.active {
+    display: block;
 }
 
-.dashboard-frame{
-    position:relative;
-    width:100%;
-    max-width:650px;
-    height:390px;
-
-    transform-style:preserve-3d;
-    transform:rotateY(-9deg) rotateX(4deg);
-
-    transition:transform 0.7s ease;
+@keyframes fade {
+    from {opacity: 0; transform: translateY(8px);}
+    to {opacity: 1; transform: translateY(0);}
 }
 
-.dashboard-frame:hover{
-    transform:rotateY(0deg) rotateX(0deg) scale(1.02);
+.kpis {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
-.dashboard-card{
-    position:absolute;
-    inset:0;
-
-    border:1px solid rgba(0,190,255,0.7);
-    border-radius:20px;
-    overflow:hidden;
-
-    background:#071529;
-
-    box-shadow:
-    0 0 25px rgba(0,153,255,0.3),
-    0 25px 65px rgba(0,0,0,0.55);
-
-    opacity:0;
-    transform:translateX(60px) rotateY(-12deg) scale(0.92);
-
-    transition:
-    opacity 0.65s ease,
-    transform 0.65s ease;
+.kpi {
+    background: #101f33;
+    padding: 15px;
+    border: 1px solid #233851;
+    border-radius: 12px;
 }
 
-.dashboard-card.active{
-    opacity:1;
-    transform:translateX(0) rotateY(0) scale(1);
-    z-index:2;
+.kpi small {
+    color: #8fa6c1;
+    display: block;
+    margin-bottom: 8px;
 }
 
-.dashboard-card img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
+.kpi strong {
+    font-size: 20px;
+    color: white;
 }
 
-/* CAROUSEL BUTTONS */
-.slider-btn{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    z-index:10;
-
-    width:44px;
-    height:44px;
-
-    border-radius:50%;
-    border:1px solid #00c8ff;
-
-    background:rgba(0,10,30,0.9);
-    color:#fff;
-
-    font-size:24px;
-    cursor:pointer;
-    transition:0.3s;
+.kpi .up {
+    color: #20d6a1;
+    font-size: 11px;
+    margin-top: 5px;
+    display: block;
 }
 
-.slider-btn:hover{
-    background:#009dff;
-    box-shadow:0 0 18px #00aaff;
+.chart-card {
+    background: #101f33;
+    border: 1px solid #233851;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 10px;
 }
 
-.prev{
-    left:-15px;
+.chart-title {
+    color: #dbeafe;
+    font-size: 13px;
+    margin-bottom: 12px;
 }
 
-.next{
-    right:-15px;
+.bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    height: 100px;
 }
 
-.dots{
-    position:absolute;
-    bottom:5px;
-
-    display:flex;
-    gap:10px;
-    z-index:10;
+.bar {
+    flex: 1;
+    background: linear-gradient(to top,#0878e9,#00d2ff);
+    border-radius: 4px 4px 0 0;
+    min-height: 10px;
+    animation: grow .8s ease;
 }
 
-.dot{
-    width:11px;
-    height:11px;
-    border-radius:50%;
-    border:none;
-    background:#66809c;
-    cursor:pointer;
-    transition:0.3s;
+@keyframes grow {
+    from {height: 0;}
 }
 
-.dot.active{
-    background:#00c8ff;
-    box-shadow:0 0 12px #00c8ff;
-    transform:scale(1.2);
+.bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    color: #8fa6c1;
+    margin-top: 8px;
 }
 
-/* SECTION */
-section{
-    padding:70px 5%;
+.dash-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 
-.section-title{
-    text-align:center;
-    font-size:35px;
-    margin-bottom:40px;
+.mini-list {
+    color: #9fb1c8;
+    font-size: 12px;
+    line-height: 2;
 }
 
-.section-title span{
-    color:#00c8ff;
+.mini-list span {
+    color: #00c8ff;
+    float: right;
 }
 
-.glass{
-    background:rgba(4,15,32,0.78);
-    border:1px solid rgba(0,174,255,0.25);
-    border-radius:18px;
-    backdrop-filter:blur(12px);
-
-    box-shadow:0 0 25px rgba(0,0,0,0.2);
+.dots {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 14px;
 }
 
-/* ABOUT */
-.about-box{
-    padding:35px;
-    text-align:center;
+.dot {
+    height: 7px;
+    width: 7px;
+    background: #34465e;
+    border-radius: 50%;
 }
 
-.about-box p{
-    max-width:950px;
-    margin:auto;
-    color:#d0deed;
-    line-height:2;
-    font-size:16px;
+.dot.active {
+    background: var(--blue);
+    box-shadow: 0 0 10px var(--blue);
 }
 
-/* SKILLS */
-.skills-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+/* Sections */
+
+section {
+    padding: 75px 6%;
 }
 
-.skill-card{
-    padding:25px;
-    text-align:center;
-    transition:0.35s;
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 45px;
 }
 
-.skill-card:hover{
-    transform:translateY(-7px);
-    border-color:#00c8ff;
-    box-shadow:0 0 22px rgba(0,174,255,0.18);
+.section-title span {
+    color: var(--blue);
 }
 
-.skill-icon{
-    font-size:38px;
-    margin-bottom:12px;
+.skills {
+    background: #081426;
 }
 
-.skill-card h3{
-    color:#00c8ff;
-    margin-bottom:10px;
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
 }
 
-.skill-card p{
-    color:#c5d5e5;
-    font-size:14px;
-    line-height:1.7;
+.skill-card {
+    background: linear-gradient(145deg,#0c1d32,#071222);
+    border: 1px solid var(--border);
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    transition: .3s;
 }
 
-/* PROJECTS */
-.projects-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--blue);
+    box-shadow: 0 10px 30px rgba(0,200,255,.12);
 }
 
-.project-card{
-    overflow:hidden;
-    transition:0.3s;
+.skill-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
 }
 
-.project-card:hover{
-    transform:translateY(-6px);
-    border-color:#00c8ff;
-    box-shadow:0 0 22px rgba(0,174,255,0.15);
+.skill-card h3 {
+    margin-bottom: 10px;
 }
 
-.project-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    display:block;
+.skill-card p {
+    color: #8fa6c1;
+    font-size: 13px;
 }
 
-.project-content{
-    padding:22px;
+/* Projects */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
 }
 
-.project-content h3{
-    color:#00c8ff;
-    margin-bottom:12px;
+.project-card {
+    background: #0a182b;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: .3s;
 }
 
-.project-content p{
-    color:#d0deed;
-    line-height:1.8;
-    font-size:14px;
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--blue);
 }
 
-.project-tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-top:15px;
+.project-preview {
+    height: 180px;
+    background: linear-gradient(135deg,#071526,#12314f);
+    padding: 18px;
+    overflow: hidden;
 }
 
-.project-tags span{
-    color:#7dd3fc;
-    border:1px solid rgba(0,174,255,0.3);
-    background:rgba(0,174,255,0.08);
-    padding:6px 10px;
-    border-radius:20px;
-    font-size:12px;
+.preview-bars {
+    display: flex;
+    height: 110px;
+    align-items: flex-end;
+    gap: 9px;
+    justify-content: center;
 }
 
-/* EDUCATION */
-.education-card{
-    max-width:650px;
-    margin:auto;
-    padding:35px;
-    text-align:center;
+.preview-bars div {
+    width: 12%;
+    background: linear-gradient(to top,#0878e9,#00d2ff);
+    border-radius: 3px 3px 0 0;
 }
 
-.education-card h3{
-    color:#00c8ff;
-    margin-bottom:15px;
-    font-size:23px;
+.project-info {
+    padding: 22px;
 }
 
-.education-card p{
-    line-height:2;
-    color:#d0deed;
+.project-info h3 {
+    margin-bottom: 10px;
 }
 
-/* CONTACT */
-.contact-card{
-    max-width:850px;
-    margin:auto;
-    padding:35px;
-    text-align:center;
+.project-info p {
+    color: #91a6c0;
+    font-size: 13px;
+    line-height: 1.7;
 }
 
-.contact-card p{
-    margin:20px 0;
-    color:#d0deed;
+.project-info a {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--blue);
+    font-size: 13px;
 }
 
-.contact-card a:not(.btn){
-    color:#00c8ff;
-    text-decoration:none;
+/* Contact */
+
+.contact {
+    background: #081426;
 }
 
-/* FOOTER */
-footer{
-    padding:25px;
-    text-align:center;
-    background:rgba(1,5,14,0.95);
-    border-top:1px solid rgba(0,174,255,0.3);
-    color:#94a3b8;
-    line-height:2;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
-/* MOBILE */
-@media(max-width:950px){
+.contact-card {
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    background: #0c1d32;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
-    .hero{
-        grid-template-columns:1fr;
-        text-align:center;
+.contact-card .icon {
+    font-size: 25px;
+    color: var(--blue);
+}
+
+.contact-card small {
+    display: block;
+    color: #91a6c0;
+    margin-bottom: 6px;
+}
+
+.contact-card p {
+    font-size: 14px;
+    word-break: break-word;
+}
+
+.contact-message {
+    text-align: center;
+    margin-top: 35px;
+    color: #9fb1c8;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: #8195ad;
+    font-size: 13px;
+}
+
+footer span {
+    color: var(--blue);
+}
+
+/* Responsive */
+
+@media(max-width:900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
     }
 
-    .tools{
-        justify-content:center;
+    .skill-grid {
+        grid-template-columns: repeat(2,1fr);
     }
 
-    .skills-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .projects-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .hero h1{
-        font-size:48px;
+    .project-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-@media(max-width:600px){
-
-    header{
-        flex-direction:column;
-        gap:16px;
+@media(max-width:600px) {
+    nav {
+        padding: 0 4%;
     }
 
-    nav{
-        justify-content:center;
-        gap:14px;
+    nav ul {
+        gap: 12px;
     }
 
-    nav a{
-        font-size:12px;
+    nav ul a {
+        font-size: 11px;
     }
 
-    .hero{
-        padding-top:50px;
+    .logo {
+        font-size: 16px;
     }
 
-    .hero h1{
-        font-size:38px;
+    .hero {
+        padding: 45px 5%;
     }
 
-    .hero h2{
-        font-size:20px;
+    .hero h1 {
+        font-size: 43px;
     }
 
-    .slider-area{
-        min-height:280px;
+    .hero h2 {
+        font-size: 17px;
     }
 
-    .dashboard-frame{
-        height:250px;
+    .dashboard-box {
+        min-height: 360px;
+        padding: 10px;
     }
 
-    .slider-btn{
-        width:35px;
-        height:35px;
-        font-size:18px;
+    .kpi {
+        padding: 10px;
     }
 
-    .prev{
-        left:-10px;
+    .kpi strong {
+        font-size: 15px;
     }
 
-    .next{
-        right:-10px;
+    .skill-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
     }
 
-    .skills-grid,
-    .projects-grid{
-        grid-template-columns:1fr;
+    .skill-card {
+        padding: 20px 10px;
     }
 
-    section{
-        padding:55px 5%;
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 
-    .section-title{
-        font-size:28px;
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 55px 5%;
+    }
+
+    .section-title {
+        font-size: 28px;
     }
 }
 </style>
@@ -586,361 +602,437 @@ footer{
 
 <body>
 
-<!-- NAVBAR -->
-<header>
+<nav>
+    <div class="logo">Tanmay <span>Jadhav.</span></div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <div class="logo">📊 Tanmay Jadhav</div>
+<!-- HERO -->
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<section class="hero" id="home">
 
-</header>
-
-<!-- HERO SECTION -->
-<div class="hero" id="home">
-
-    <div class="hero-text">
-
-        <span class="tag">✦ DATA ANALYTICS PORTFOLIO</span>
+    <div class="hero-content">
+        <div class="tag">● DATA ANALYST PORTFOLIO</div>
 
         <h1>Tanmay <span>Jadhav</span></h1>
 
-        <h2>Data Analyst | MIS Reporting</h2>
+        <h2>Data Analyst | SQL | Python | Power BI</h2>
 
         <p>
-            Turning raw data into meaningful insights through
-            SQL, Python, Advanced Excel and Power BI.
-            Focused on data analytics, business intelligence,
-            reporting and dashboard development.
+            Turning Data into Insights. Passionate about Data Analytics,
+            Business Intelligence and Data-Driven Decision Making.
         </p>
 
-        <!-- SKILL SHORTCUTS -->
-        <div class="tools">
-            <div class="tool"><span>▤</span> SQL</div>
-            <div class="tool"><span>🐍</span> Python</div>
-            <div class="tool"><span>▦</span> Advanced Excel</div>
-            <div class="tool"><span>▥</span> Power BI</div>
+        <div class="buttons">
+            <a href="#projects" class="btn primary">View Projects →</a>
+            <a href="#contact" class="btn secondary">Contact Me</a>
+        </div>
+    </div>
+
+    <!-- DASHBOARD -->
+
+    <div class="dashboard-box">
+
+        <div class="dash-top">
+            <h3>📊 Analytics Dashboard</h3>
+            <small id="dashLabel">STARBUCKS SALES</small>
         </div>
 
-        <a href="#projects" class="btn">🚀 Explore My Projects</a>
-        <a href="#contact" class="btn btn-outline">✉ Contact Me</a>
+        <!-- DASHBOARD 1 -->
 
-    </div>
+        <div class="dash-slide active">
 
-    <!-- 3D AUTO DASHBOARD -->
-    <div class="slider-area">
+            <div class="kpis">
+                <div class="kpi">
+                    <small>Total Sales</small>
+                    <strong>$1.24M</strong>
+                    <span class="up">↑ 12.5%</span>
+                </div>
 
-        <button class="slider-btn prev" onclick="previousSlide()">‹</button>
+                <div class="kpi">
+                    <small>Transactions</small>
+                    <strong>35.8K</strong>
+                    <span class="up">↑ 10.2%</span>
+                </div>
 
-        <div class="dashboard-frame" id="dashboardFrame">
-
-            <div class="dashboard-card active">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
-                     alt="Power BI Analytics Dashboard">
+                <div class="kpi">
+                    <small>Avg. Order</small>
+                    <strong>$34.58</strong>
+                    <span class="up">↑ 8.1%</span>
+                </div>
             </div>
 
-            <div class="dashboard-card">
-                <img src="sql-dashboard.jpg"
-                     alt="SQL Dashboard">
+            <div class="chart-card">
+                <div class="chart-title">Monthly Sales Trend</div>
+                <div class="bars">
+                    <div class="bar" style="height:40%"></div>
+                    <div class="bar" style="height:55%"></div>
+                    <div class="bar" style="height:70%"></div>
+                    <div class="bar" style="height:48%"></div>
+                    <div class="bar" style="height:65%"></div>
+                    <div class="bar" style="height:82%"></div>
+                    <div class="bar" style="height:60%"></div>
+                    <div class="bar" style="height:90%"></div>
+                    <div class="bar" style="height:76%"></div>
+                    <div class="bar" style="height:100%"></div>
+                </div>
+                <div class="bar-labels">
+                    <span>Jan</span><span>Mar</span><span>May</span>
+                    <span>Jul</span><span>Sep</span><span>Dec</span>
+                </div>
             </div>
 
-            <div class="dashboard-card">
-                <img src="excel-dashboard.jpg"
-                     alt="Excel Dashboard">
-            </div>
+            <div class="dash-bottom">
+                <div class="chart-card">
+                    <div class="chart-title">Top Products</div>
+                    <div class="mini-list">
+                        Latte <span>28%</span><br>
+                        Cold Brew <span>24%</span><br>
+                        Cappuccino <span>20%</span><br>
+                        Americano <span>16%</span>
+                    </div>
+                </div>
 
-            <div class="dashboard-card">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
-                     alt="Data Analytics Dashboard">
+                <div class="chart-card">
+                    <div class="chart-title">Category Sales</div>
+                    <div class="mini-list">
+                Coffee <span>40%</span><br>
+                Tea <span>30%</span><br>
+                Bakery <span>20%</span><br>
+                Others <span>10%</span>
+                    </div>
+                </div>
             </div>
 
         </div>
 
-        <button class="slider-btn next" onclick="nextSlide()">›</button>
+        <!-- DASHBOARD 2 -->
 
-        <div class="dots" id="dots"></div>
+        <div class="dash-slide">
+
+            <div class="kpis">
+                <div class="kpi">
+                    <small>Customers</small>
+                    <strong>18,540</strong>
+                    <span class="up">↑ 14%</span>
+                </div>
+
+                <div class="kpi">
+                    <small>Revenue</small>
+                    <strong>₹8.5L</strong>
+                    <span class="up">↑ 18%</span>
+                </div>
+
+                <div class="kpi">
+                    <small>Growth</small>
+                    <strong>24.6%</strong>
+                    <span class="up">↑ 8%</span>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <div class="chart-title">Business Performance</div>
+                <div class="bars">
+                    <div class="bar" style="height:35%"></div>
+                    <div class="bar" style="height:50%"></div>
+                    <div class="bar" style="height:75%"></div>
+                    <div class="bar" style="height:60%"></div>
+                    <div class="bar" style="height:90%"></div>
+                    <div class="bar" style="height:65%"></div>
+                    <div class="bar" style="height:100%"></div>
+                    <div class="bar" style="height:80%"></div>
+                </div>
+                <div class="bar-labels">
+                    <span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span>
+                </div>
+            </div>
+
+            <div class="dash-bottom">
+                <div class="chart-card">
+                    <div class="chart-title">Revenue</div>
+                    <div class="mini-list">
+                        Online <span>45%</span><br>
+                        Retail <span>30%</span><br>
+                        Direct <span>25%</span>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-title">Growth</div>
+                    <div class="mini-list">
+                        Sales <span>+18%</span><br>
+                        Users <span>+14%</span><br>
+                        Profit <span>+22%</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- DASHBOARD 3 -->
+
+        <div class="dash-slide">
+
+            <div class="kpis">
+                <div class="kpi">
+                    <small>Data Rows</small>
+                    <strong>24.5K</strong>
+                    <span class="up">Analyzed</span>
+                </div>
+
+                <div class="kpi">
+                    <small>Products</small>
+                    <strong>1,250</strong>
+                    <span class="up">Total</span>
+                </div>
+
+                <div class="kpi">
+                    <small>Regions</small>
+                    <strong>12</strong>
+                    <span class="up">Analyzed</span>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <div class="chart-title">Data Analysis Overview</div>
+                <div class="bars">
+                    <div class="bar" style="height:75%"></div>
+                    <div class="bar" style="height:45%"></div>
+                    <div class="bar" style="height:90%"></div>
+                    <div class="bar" style="height:60%"></div>
+                    <div class="bar" style="height:100%"></div>
+                    <div class="bar" style="height:80%"></div>
+                    <div class="bar" style="height:55%"></div>
+                    <div class="bar" style="height:95%"></div>
+                </div>
+                <div class="bar-labels">
+                    <span>North</span><span>South</span><span>East</span><span>West</span>
+                </div>
+            </div>
+
+            <div class="dash-bottom">
+                <div class="chart-card">
+                    <div class="chart-title">Top Region</div>
+                    <div class="mini-list">
+                        North <span>35%</span><br>
+                        South <span>28%</span><br>
+                        West <span>20%</span>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-title">Analysis</div>
+                    <div class="mini-list">
+                        SQL <span>✓</span><br>
+                        Python <span>✓</span><br>
+                        Power BI <span>✓</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
 
     </div>
-
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-
-    <h2 class="section-title">About <span>Me</span></h2>
-
-    <div class="glass about-box">
-
-        <p>
-            I am a BCA graduate interested in Data Analytics,
-            Business Intelligence and MIS Reporting. I work with
-            SQL, Python, Advanced Excel and Power BI to analyze
-            data, create dashboards, track business performance
-            and transform raw data into useful insights.
-            I am passionate about data visualization,
-            analytical reporting and business decision-making.
-        </p>
-
-    </div>
-
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
 
-    <h2 class="section-title">Technical <span>Skills</span></h2>
+<section class="skills" id="skills">
 
-    <div class="skills-grid">
+    <h2 class="section-title">My <span>Skills</span></h2>
 
-        <div class="skill-card glass">
-            <div class="skill-icon">📊</div>
-            <h3>Power BI</h3>
-            <p>Interactive dashboards, KPI reporting, DAX and data visualization.</p>
-        </div>
+    <div class="skill-grid">
 
-        <div class="skill-card glass">
+        <div class="skill-card">
             <div class="skill-icon">🗄️</div>
             <h3>SQL</h3>
-            <p>Data extraction, joins, queries, filtering and aggregations.</p>
+            <p>Data Query & Analysis</p>
         </div>
 
-        <div class="skill-card glass">
+        <div class="skill-card">
             <div class="skill-icon">🐍</div>
             <h3>Python</h3>
-            <p>Data analysis, Pandas, data cleaning and automation.</p>
+            <p>Data Science & Analytics</p>
         </div>
 
-        <div class="skill-card glass">
-            <div class="skill-icon">📗</div>
+        <div class="skill-card">
+            <div class="skill-icon">📊</div>
             <h3>Advanced Excel</h3>
-            <p>Pivot Tables, XLOOKUP, VLOOKUP, Power Query and reporting.</p>
+            <p>Data Manipulation & BI</p>
         </div>
 
-        <div class="skill-card glass">
+        <div class="skill-card">
             <div class="skill-icon">📈</div>
-            <h3>Data Analytics</h3>
-            <p>Trend analysis, business insights and data-driven decisions.</p>
-        </div>
-
-        <div class="skill-card glass">
-            <div class="skill-icon">📑</div>
-            <h3>MIS Reporting</h3>
-            <p>Performance tracking, reports and business information management.</p>
+            <h3>Power BI</h3>
+            <p>Interactive Dashboards</p>
         </div>
 
     </div>
-
 </section>
 
 <!-- PROJECTS -->
+
 <section id="projects">
 
-    <h2 class="section-title">Featured <span>Projects</span></h2>
+    <h2 class="section-title">My <span>Projects</span></h2>
 
-    <div class="projects-grid">
+    <div class="project-grid">
 
-        <div class="project-card glass">
-
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
-                 alt="Starbucks Sales Dashboard">
-
-            <div class="project-content">
-
-                <h3>Starbucks Sales Dashboard</h3>
-
-                <p>
-                    Sales performance analysis, product insights,
-                    customer trends and business KPIs through
-                    interactive Power BI visualizations.
-                </p>
-
-                <div class="project-tags">
-                    <span>Power BI</span>
-                    <span>Excel</span>
-                    <span>Analytics</span>
+        <div class="project-card">
+            <div class="project-preview">
+                <div class="preview-bars">
+                    <div style="height:40%"></div>
+                    <div style="height:65%"></div>
+                    <div style="height:85%"></div>
+                    <div style="height:50%"></div>
+                    <div style="height:100%"></div>
+                    <div style="height:75%"></div>
+                    <div style="height:90%"></div>
                 </div>
-
             </div>
 
+            <div class="project-info">
+                <h3>Starbucks Power BI Dashboard</h3>
+                <p>Sales Analysis, KPIs, customer trends and business insights using Power BI.</p>
+                <a href="#contact">View Project →</a>
+            </div>
         </div>
 
-        <div class="project-card glass">
+        <div class="project-card">
+            <div class="project-preview">
+                <div class="preview-bars">
+                    <div style="height:60%"></div>
+                    <div style="height:90%"></div>
+                    <div style="height:45%"></div>
+                    <div style="height:75%"></div>
+                    <div style="height:100%"></div>
+                    <div style="height:65%"></div>
+                    <div style="height:80%"></div>
+                </div>
+            </div>
 
-            <img src="sql-dashboard.jpg"
-                 alt="SQL Data Analytics Project">
-
-            <div class="project-content">
-
+            <div class="project-info">
                 <h3>SQL Data Analytics</h3>
-
-                <p>
-                    Data extraction, query analysis,
-                    database operations and business
-                    insights using SQL.
-                </p>
-
-                <div class="project-tags">
-                    <span>SQL</span>
-                    <span>Database</span>
-                    <span>Analysis</span>
-                </div>
-
+                <p>Data exploration, SQL queries, data cleaning and analytical insights.</p>
+                <a href="#contact">View Project →</a>
             </div>
-
         </div>
 
-        <div class="project-card glass">
-
-            <img src="excel-dashboard.jpg"
-                 alt="Advanced Excel Dashboard">
-
-            <div class="project-content">
-
-                <h3>Advanced Excel Dashboard</h3>
-
-                <p>
-                    Interactive reporting, Pivot Tables,
-                    data analysis, charts and Excel-based
-                    business performance tracking.
-                </p>
-
-                <div class="project-tags">
-                    <span>Excel</span>
-                    <span>Reporting</span>
-                    <span>Dashboard</span>
+        <div class="project-card">
+            <div class="project-preview">
+                <div class="preview-bars">
+                    <div style="height:55%"></div>
+                    <div style="height:85%"></div>
+                    <div style="height:70%"></div>
+                    <div style="height:100%"></div>
+                    <div style="height:45%"></div>
+                    <div style="height:80%"></div>
+                    <div style="height:95%"></div>
                 </div>
-
             </div>
 
+            <div class="project-info">
+                <h3>Excel Analytics</h3>
+                <p>Data analysis, pivot tables, charts and reporting using Excel.</p>
+                <a href="#contact">View Project →</a>
+            </div>
         </div>
 
     </div>
-
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-
-    <h2 class="section-title">My <span>Education</span></h2>
-
-    <div class="education-card glass">
-
-        <h3>Bachelor of Computer Applications (BCA)</h3>
-
-        <p>🎓 Graduation Year: 2022</p>
-
-        <p>Computer Applications</p>
-
-    </div>
-
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+
+<section class="contact" id="contact">
 
     <h2 class="section-title">Contact <span>Me</span></h2>
 
-    <div class="contact-card glass">
+    <div class="contact-grid">
 
-        <p>📧 Email:
-            <a href="mailto:tj360790@gmail.com">tj360790@gmail.com</a>
-        </p>
+        <a class="contact-card" href="mailto:tj360790@gmail.com">
+            <div class="icon">✉</div>
+            <div>
+                <small>Email</small>
+                <p>tj360790@gmail.com</p>
+            </div>
+        </a>
 
-        <p>📱 Mobile:
-            <a href="tel:8698684553">8698684553</a>
-        </p>
-
-        <a href="mailto:tj360790@gmail.com" class="btn">
-            Send Email
+        <a class="contact-card" href="tel:8698684553">
+            <div class="icon">☎</div>
+            <div>
+                <small>Phone</small>
+                <p>8698684553</p>
+            </div>
         </a>
 
     </div>
 
+    <div class="contact-message">
+        <h3 style="color:white;margin-bottom:12px;">Let's Connect!</h3>
+        <p>Feel free to reach out for collaborations, opportunities or a friendly hello.</p>
+        <br>
+        <a href="mailto:tj360790@gmail.com" class="btn primary">Get In Touch →</a>
+    </div>
+
 </section>
 
-<!-- FOOTER -->
 <footer>
-
-    <p>© 2026 Tanmay Jadhav | Data Analyst Portfolio</p>
-
-    <p>Analyze • Visualize • Grow</p>
-
+    © 2026 Tanmay Jadhav. All Rights Reserved.
+    <br><br>
+    Built with <span>♥</span> for Data Analytics
 </footer>
 
-<!-- AUTO CHANGE DASHBOARD EVERY 3 SECONDS -->
 <script>
 
-const cards = document.querySelectorAll(".dashboard-card");
-const dotsContainer = document.getElementById("dots");
+// Auto dashboard slider - 3 seconds
+
+let slides = document.querySelectorAll(".dash-slide");
+let dots = document.querySelectorAll(".dot");
+let dashLabel = document.getElementById("dashLabel");
+
+let labels = [
+    "STARBUCKS SALES",
+    "BUSINESS ANALYTICS",
+    "DATA ANALYSIS"
+];
 
 let currentSlide = 0;
-let autoPlay;
 
-/* CREATE DOTS */
-cards.forEach((card,index)=>{
+function showSlide(index) {
 
-    const dot = document.createElement("button");
+    slides.forEach(slide => slide.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active"));
 
-    dot.className = "dot" + (index === 0 ? " active" : "");
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
 
-    dot.setAttribute("aria-label","Show dashboard " + (index + 1));
+    dashLabel.textContent = labels[index];
 
-    dot.onclick = ()=>showSlide(index);
-
-    dotsContainer.appendChild(dot);
-
-});
-
-/* SHOW SLIDE */
-function showSlide(index){
-
-    cards[currentSlide].classList.remove("active");
-    dotsContainer.children[currentSlide].classList.remove("active");
-
-    currentSlide = (index + cards.length) % cards.length;
-
-    cards[currentSlide].classList.add("active");
-    dotsContainer.children[currentSlide].classList.add("active");
-
+    currentSlide = index;
 }
 
-/* NEXT */
-function nextSlide(){
-    showSlide(currentSlide + 1);
-    restartAutoPlay();
-}
+setInterval(() => {
 
-/* PREVIOUS */
-function previousSlide(){
-    showSlide(currentSlide - 1);
-    restartAutoPlay();
-}
+    currentSlide++;
 
-/* AUTO PLAY - 3 SECONDS */
-function startAutoPlay(){
+    if(currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
 
-    autoPlay = setInterval(()=>{
-        showSlide(currentSlide + 1);
-    },3000);
+    showSlide(currentSlide);
 
-}
-
-/* RESET TIMER */
-function restartAutoPlay(){
-
-    clearInterval(autoPlay);
-    startAutoPlay();
-
-}
-
-/* START */
-startAutoPlay();
+}, 3000);
 
 </script>
 
