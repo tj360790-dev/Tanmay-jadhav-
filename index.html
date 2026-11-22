@@ -7,944 +7,926 @@
 <title>Tanmay Jadhav | Data Analyst</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg:#030b18;
+    --panel:#09182a;
+    --blue:#00c8ff;
+    --blue2:#168bff;
+    --text:#f3f7ff;
+    --muted:#a4b5ca;
+    --border:rgba(0,200,255,.35);
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html {
+    scroll-behavior:smooth;
 }
 
 body {
-    background: #06101f;
-    color: #f1f5ff;
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-}
-
-:root {
-    --blue: #00c8ff;
-    --blue2: #4285ff;
-    --bg: #06101f;
-    --card: #0b192c;
-    --border: rgba(0,200,255,.25);
+    background:var(--bg);
+    color:var(--text);
+    font-family:Inter,Arial,sans-serif;
+    overflow-x:hidden;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+    color:inherit;
+    text-decoration:none;
 }
 
-nav {
-    height: 72px;
-    padding: 0 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    background: rgba(4,12,25,.94);
-    backdrop-filter: blur(15px);
-    z-index: 100;
-    border-bottom: 1px solid var(--border);
+/* NAVBAR */
+
+.navbar {
+    height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 5%;
+    background:#030916;
+    border-bottom:1px solid var(--border);
 }
 
 .logo {
-    font-size: 22px;
-    font-weight: 800;
+    font-size:21px;
+    font-weight:800;
 }
 
 .logo span {
-    color: var(--blue);
+    color:var(--blue);
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
+.nav-links {
+    display:flex;
+    align-items:center;
+    gap:28px;
 }
 
-nav ul a {
-    color: #cbd5e1;
-    font-size: 14px;
-    transition: .3s;
+.nav-links a {
+    font-size:13px;
+    color:#d4dfed;
+    transition:.3s;
 }
 
-nav ul a:hover {
-    color: var(--blue);
+.nav-links a:hover {
+    color:var(--blue);
 }
+
+/* ONE SCREEN HERO */
 
 .hero {
-    min-height: 560px;
-    padding: 65px 5%;
-    display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 40px;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+    height:39vh;
+    min-height:320px;
+    max-height:420px;
+    padding:24px 5%;
+    display:grid;
+    grid-template-columns:1fr 1.05fr;
+    gap:25px;
+    align-items:center;
+    overflow:hidden;
+    position:relative;
     background:
-    radial-gradient(circle at 20% 50%, rgba(0,140,255,.15), transparent 45%),
-    linear-gradient(120deg,#06101f,#07172a,#04101e);
+      radial-gradient(ellipse at 20% 50%,rgba(0,100,255,.16),transparent 50%),
+      linear-gradient(110deg,#061326,#07182b,#030b17);
 }
 
-.hero::before {
-    content: "SELECT * FROM DATA   •   PYTHON   •   SQL   •   POWER BI";
-    position: absolute;
-    top: 20px;
-    left: 5%;
-    color: rgba(0,200,255,.07);
-    font-size: 30px;
-    font-weight: 800;
-    white-space: nowrap;
-    pointer-events: none;
-}
-
-.hero::after {
-    content: "010101  ANALYTICS  101010  DATA  010101";
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    color: rgba(0,200,255,.05);
-    font-size: 36px;
-    white-space: nowrap;
+.code-bg {
+    position:absolute;
+    inset:0;
+    opacity:.12;
+    pointer-events:none;
+    overflow:hidden;
+    color:#00c8ff;
+    font-family:monospace;
+    font-size:12px;
+    line-height:1.8;
+    white-space:pre;
+    transform:rotate(-2deg) scale(1.1);
 }
 
 .hero-content {
-    z-index: 2;
+    position:relative;
+    z-index:2;
 }
 
 .tag {
-    color: var(--blue);
-    border: 1px solid var(--border);
-    padding: 9px 16px;
-    display: inline-block;
-    border-radius: 30px;
-    font-size: 13px;
-    margin-bottom: 25px;
-    background: rgba(0,200,255,.05);
+    display:inline-block;
+    border:1px solid var(--border);
+    border-radius:30px;
+    padding:7px 13px;
+    font-size:11px;
+    color:var(--blue);
+    margin-bottom:14px;
+    background:rgba(0,200,255,.06);
 }
 
 .hero h1 {
-    font-size: clamp(40px,5vw,70px);
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 15px;
-    letter-spacing: -2px;
+    font-size:clamp(35px,4vw,58px);
+    line-height:1.05;
+    letter-spacing:-2px;
+    margin-bottom:10px;
+    white-space:nowrap;
 }
 
 .hero h1 span {
-    color: var(--blue);
+    color:var(--blue);
 }
 
 .hero h2 {
-    font-size: 21px;
-    color: #dbeafe;
-    margin-bottom: 20px;
+    font-size:16px;
+    margin-bottom:12px;
+    color:#d8e6f7;
 }
 
 .hero p {
-    color: #9fb1c8;
-    line-height: 1.8;
-    max-width: 480px;
-    margin-bottom: 30px;
+    max-width:440px;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.6;
+    margin-bottom:16px;
 }
 
 .buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+    display:flex;
+    gap:10px;
 }
 
 .btn {
-    padding: 14px 25px;
-    border-radius: 30px;
-    display: inline-block;
-    font-weight: 600;
-    transition: .3s;
+    padding:10px 17px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:700;
+    display:inline-block;
+    transition:.25s;
 }
 
-.primary {
-    background: linear-gradient(90deg,#00bfff,#347cff);
-    color: white;
-    box-shadow: 0 0 25px rgba(0,180,255,.2);
+.btn-primary {
+    background:linear-gradient(90deg,#00bfff,#1688ff);
+    color:#fff;
 }
 
-.secondary {
-    border: 1px solid #4a6585;
+.btn-outline {
+    border:1px solid var(--blue);
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 25px rgba(0,200,255,.3);
+    transform:translateY(-2px);
+    box-shadow:0 0 16px rgba(0,200,255,.25);
 }
 
-/* Dashboard showcase */
+/* DASHBOARD */
 
-.dashboard-box {
-    width: 100%;
-    min-height: 390px;
-    border: 2px solid #00bfff;
-    border-radius: 22px;
-    padding: 15px;
-    background: #091526;
-    box-shadow: 0 0 35px rgba(0,150,255,.2);
-    position: relative;
-    z-index: 2;
-    transition: .3s;
+.dashboard {
+    position:relative;
+    z-index:2;
+    height:100%;
+    max-height:355px;
+    min-height:280px;
+    background:#061426;
+    border:1.5px solid var(--blue);
+    border-radius:15px;
+    padding:12px;
+    box-shadow:0 0 18px rgba(0,150,255,.17);
+    overflow:hidden;
 }
 
-.dashboard-box:hover {
-    box-shadow: 0 0 45px rgba(0,200,255,.3);
+.dash-head {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
 }
 
-.dash-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+.dash-head h3 {
+    font-size:14px;
 }
 
-.dash-top h3 {
-    font-size: 18px;
+.dash-head small {
+    color:var(--blue);
+    font-size:10px;
 }
 
-.dash-top small {
-    color: var(--blue);
+.slide {
+    display:none;
 }
 
-.dash-slide {
-    display: none;
-    animation: fade .5s ease;
-}
-
-.dash-slide.active {
-    display: block;
+.slide.active {
+    display:block;
+    animation:fade .4s;
 }
 
 @keyframes fade {
-    from {opacity: 0; transform: translateY(8px);}
-    to {opacity: 1; transform: translateY(0);}
+    from {opacity:0}
+    to {opacity:1}
 }
 
 .kpis {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 10px;
-    margin-bottom: 15px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:7px;
+    margin-bottom:8px;
 }
 
 .kpi {
-    background: #101f33;
-    padding: 15px;
-    border: 1px solid #233851;
-    border-radius: 12px;
+    background:#0c2035;
+    border:1px solid #1c3855;
+    border-radius:9px;
+    padding:9px;
 }
 
 .kpi small {
-    color: #8fa6c1;
-    display: block;
-    margin-bottom: 8px;
+    display:block;
+    color:#a4b7ce;
+    font-size:9px;
+    margin-bottom:5px;
 }
 
 .kpi strong {
-    font-size: 20px;
-    color: white;
+    font-size:17px;
+    display:block;
 }
 
-.kpi .up {
-    color: #20d6a1;
-    font-size: 11px;
-    margin-top: 5px;
-    display: block;
+.kpi em {
+    color:#20d6a1;
+    font-style:normal;
+    font-size:9px;
 }
 
-.chart-card {
-    background: #101f33;
-    border: 1px solid #233851;
-    border-radius: 12px;
-    padding: 14px;
-    margin-bottom: 10px;
+.chart-grid {
+    display:grid;
+    grid-template-columns:1.5fr 1fr;
+    gap:7px;
+}
+
+.chart {
+    background:#0c2035;
+    border:1px solid #1c3855;
+    border-radius:9px;
+    padding:9px;
+    min-height:105px;
 }
 
 .chart-title {
-    color: #dbeafe;
-    font-size: 13px;
-    margin-bottom: 12px;
+    font-size:10px;
+    color:#dceaff;
+    margin-bottom:7px;
 }
 
 .bars {
-    display: flex;
-    align-items: flex-end;
-    gap: 8px;
-    height: 100px;
+    display:flex;
+    align-items:end;
+    gap:5px;
+    height:65px;
 }
 
-.bar {
-    flex: 1;
-    background: linear-gradient(to top,#0878e9,#00d2ff);
-    border-radius: 4px 4px 0 0;
-    min-height: 10px;
-    animation: grow .8s ease;
+.bars i {
+    display:block;
+    flex:1;
+    background:linear-gradient(#00d5ff,#0878ed);
+    border-radius:3px 3px 0 0;
 }
 
-@keyframes grow {
-    from {height: 0;}
+.labels {
+    display:flex;
+    justify-content:space-between;
+    font-size:8px;
+    color:#8098b3;
+    margin-top:4px;
 }
 
-.bar-labels {
-    display: flex;
-    justify-content: space-between;
-    font-size: 9px;
-    color: #8fa6c1;
-    margin-top: 8px;
+.dash-lower {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:7px;
+    margin-top:7px;
 }
 
-.dash-bottom {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+.lower-card {
+    background:#0c2035;
+    border:1px solid #1c3855;
+    border-radius:8px;
+    padding:8px;
+    font-size:9px;
+    color:#a5b7ce;
 }
 
-.mini-list {
-    color: #9fb1c8;
-    font-size: 12px;
-    line-height: 2;
+.lower-card h4 {
+    color:white;
+    font-size:10px;
+    margin-bottom:4px;
 }
 
-.mini-list span {
-    color: #00c8ff;
-    float: right;
+.product-line {
+    margin-top:4px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.product-line span {
+    color:var(--blue);
 }
 
 .dots {
-    display: flex;
-    gap: 6px;
-    justify-content: center;
-    margin-top: 14px;
+    display:flex;
+    justify-content:center;
+    gap:5px;
+    margin-top:7px;
 }
 
 .dot {
-    height: 7px;
-    width: 7px;
-    background: #34465e;
-    border-radius: 50%;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#35506b;
 }
 
 .dot.active {
-    background: var(--blue);
-    box-shadow: 0 0 10px var(--blue);
+    background:var(--blue);
 }
 
-/* Sections */
+/* SKILLS */
 
-section {
-    padding: 75px 6%;
+.skills {
+    height:13vh;
+    min-height:105px;
+    padding:10px 5%;
+    background:#061222;
+    border-top:1px solid rgba(0,200,255,.15);
 }
 
 .section-title {
-    text-align: center;
-    font-size: 34px;
-    margin-bottom: 45px;
+    font-size:21px;
+    text-align:center;
+    margin-bottom:10px;
 }
 
 .section-title span {
-    color: var(--blue);
-}
-
-.skills {
-    background: #081426;
+    color:var(--blue);
 }
 
 .skill-grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
 }
 
-.skill-card {
-    background: linear-gradient(145deg,#0c1d32,#071222);
-    border: 1px solid var(--border);
-    padding: 30px 20px;
-    border-radius: 16px;
-    text-align: center;
-    transition: .3s;
+.skill {
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:linear-gradient(130deg,#0b1d32,#071324);
+    height:56px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
 }
 
-.skill-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--blue);
-    box-shadow: 0 10px 30px rgba(0,200,255,.12);
+.skill .icon {
+    font-size:23px;
 }
 
-.skill-icon {
-    font-size: 35px;
-    margin-bottom: 15px;
+.skill h3 {
+    font-size:12px;
 }
 
-.skill-card h3 {
-    margin-bottom: 10px;
+.skill p {
+    font-size:9px;
+    color:var(--muted);
+    margin-top:3px;
 }
 
-.skill-card p {
-    color: #8fa6c1;
-    font-size: 13px;
-}
+/* PROJECTS */
 
-/* Projects */
+.projects {
+    height:23vh;
+    min-height:180px;
+    padding:12px 5%;
+    background:#030c19;
+}
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 25px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:13px;
 }
 
-.project-card {
-    background: #0a182b;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-    transition: .3s;
+.project {
+    display:flex;
+    align-items:center;
+    gap:12px;
+    height:115px;
+    padding:12px;
+    border:1px solid var(--border);
+    border-radius:11px;
+    background:linear-gradient(130deg,#0b1d32,#071323);
+    transition:.25s;
 }
 
-.project-card:hover {
-    transform: translateY(-7px);
-    border-color: var(--blue);
+.project:hover {
+    border-color:var(--blue);
+    transform:translateY(-3px);
 }
 
-.project-preview {
-    height: 180px;
-    background: linear-gradient(135deg,#071526,#12314f);
-    padding: 18px;
-    overflow: hidden;
-}
-
-.preview-bars {
-    display: flex;
-    height: 110px;
-    align-items: flex-end;
-    gap: 9px;
-    justify-content: center;
-}
-
-.preview-bars div {
-    width: 12%;
-    background: linear-gradient(to top,#0878e9,#00d2ff);
-    border-radius: 3px 3px 0 0;
-}
-
-.project-info {
-    padding: 22px;
+.project-visual {
+    width:85px;
+    height:82px;
+    border-radius:8px;
+    flex-shrink:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(145deg,#0b3150,#06182b);
+    border:1px solid #1a4c70;
+    font-size:30px;
 }
 
 .project-info h3 {
-    margin-bottom: 10px;
+    font-size:11px;
+    margin-bottom:5px;
 }
 
 .project-info p {
-    color: #91a6c0;
-    font-size: 13px;
-    line-height: 1.7;
+    font-size:9px;
+    color:var(--muted);
+    line-height:1.5;
 }
 
 .project-info a {
-    display: inline-block;
-    margin-top: 15px;
-    color: var(--blue);
-    font-size: 13px;
+    display:inline-block;
+    margin-top:6px;
+    color:var(--blue);
+    font-size:9px;
 }
 
-/* Contact */
+/* CONTACT */
 
 .contact {
-    background: #081426;
+    height:11vh;
+    min-height:90px;
+    padding:12px 5%;
+    background:#061222;
+    border-top:1px solid rgba(0,200,255,.15);
 }
 
 .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    max-width: 900px;
-    margin: auto;
+    display:grid;
+    grid-template-columns:1fr 1fr 1.5fr;
+    gap:15px;
+    align-items:center;
 }
 
-.contact-card {
-    padding: 22px;
-    border: 1px solid var(--border);
-    border-radius: 15px;
-    background: #0c1d32;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.contact-item {
+    border:1px solid var(--border);
+    border-radius:9px;
+    padding:9px 13px;
+    background:#0b1d32;
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
-.contact-card .icon {
-    font-size: 25px;
-    color: var(--blue);
+.contact-item .icon {
+    font-size:20px;
+    color:var(--blue);
 }
 
-.contact-card small {
-    display: block;
-    color: #91a6c0;
-    margin-bottom: 6px;
+.contact-item small {
+    font-size:9px;
+    color:var(--muted);
+    display:block;
+    margin-bottom:3px;
 }
 
-.contact-card p {
-    font-size: 14px;
-    word-break: break-word;
+.contact-item strong {
+    font-size:11px;
+    word-break:break-word;
 }
 
-.contact-message {
-    text-align: center;
-    margin-top: 35px;
-    color: #9fb1c8;
+.connect {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
 }
+
+.connect h3 {
+    font-size:12px;
+    margin-bottom:3px;
+}
+
+.connect p {
+    font-size:9px;
+    color:var(--muted);
+}
+
+.connect .btn {
+    white-space:nowrap;
+    padding:9px 14px;
+    font-size:10px;
+}
+
+/* FOOTER */
 
 footer {
-    padding: 25px;
-    text-align: center;
-    border-top: 1px solid var(--border);
-    color: #8195ad;
-    font-size: 13px;
+    height:6vh;
+    min-height:45px;
+    padding:0 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-top:1px solid var(--border);
+    background:#030916;
+    color:#94a7bf;
+    font-size:10px;
 }
 
 footer span {
-    color: var(--blue);
+    color:var(--blue);
 }
 
-/* Responsive */
+/* RESPONSIVE */
 
-@media(max-width:900px) {
-    .hero {
-        grid-template-columns: 1fr;
-        padding-top: 60px;
+@media(max-width:950px) {
+    body {
+        overflow:auto;
     }
 
-    .skill-grid {
-        grid-template-columns: repeat(2,1fr);
+    .hero {
+        height:auto;
+        max-height:none;
+        grid-template-columns:1fr;
+    }
+
+    .dashboard {
+        min-height:310px;
+    }
+
+    .skills,.projects,.contact,footer {
+        height:auto;
     }
 
     .project-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:1fr;
+    }
+
+    .project {
+        height:auto;
+        min-height:100px;
+    }
+
+    .contact-grid {
+        grid-template-columns:1fr 1fr;
+    }
+
+    .connect {
+        grid-column:1/-1;
     }
 }
 
 @media(max-width:600px) {
-    nav {
-        padding: 0 4%;
-    }
-
-    nav ul {
-        gap: 12px;
-    }
-
-    nav ul a {
-        font-size: 11px;
+    .navbar {
+        height:auto;
+        min-height:55px;
+        flex-wrap:wrap;
+        gap:10px;
+        padding:12px 4%;
     }
 
     .logo {
-        font-size: 16px;
+        font-size:17px;
+    }
+
+    .nav-links {
+        gap:12px;
+    }
+
+    .nav-links a {
+        font-size:10px;
     }
 
     .hero {
-        padding: 45px 5%;
+        padding:28px 4%;
     }
 
     .hero h1 {
-        font-size: 43px;
+        font-size:38px;
     }
 
     .hero h2 {
-        font-size: 17px;
+        font-size:13px;
     }
 
-    .dashboard-box {
-        min-height: 360px;
-        padding: 10px;
+    .hero p {
+        font-size:11px;
     }
 
-    .kpi {
-        padding: 10px;
+    .dashboard {
+        min-height:280px;
+        padding:8px;
     }
 
     .kpi strong {
-        font-size: 15px;
+        font-size:14px;
+    }
+
+    .chart {
+        min-height:90px;
+    }
+
+    .skills {
+        padding:20px 4%;
     }
 
     .skill-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
+        grid-template-columns:1fr 1fr;
     }
 
-    .skill-card {
-        padding: 20px 10px;
+    .projects {
+        padding:20px 4%;
     }
 
-    .project-grid {
-        grid-template-columns: 1fr;
+    .contact {
+        padding:20px 4%;
     }
 
     .contact-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:1fr;
     }
 
-    section {
-        padding: 55px 5%;
+    .connect {
+        flex-wrap:wrap;
     }
 
-    .section-title {
-        font-size: 28px;
+    footer {
+        flex-direction:column;
+        gap:6px;
+        padding:12px;
+        text-align:center;
     }
+}
+
+/* Small-height desktops */
+
+@media(min-width:951px) and (max-height:800px) {
+    .navbar { height:6vh; min-height:45px; }
+    .hero { height:38vh; min-height:270px; padding-top:15px; padding-bottom:15px; }
+    .skills { height:13vh; min-height:90px; }
+    .projects { height:22vh; min-height:155px; }
+    .contact { height:11vh; min-height:80px; }
+    footer { height:5vh; min-height:35px; }
+    .project { height:95px; }
+    .project-visual { height:68px; }
 }
 </style>
 </head>
 
 <body>
 
-<nav>
+<!-- NAVBAR -->
+<nav class="navbar">
     <div class="logo">Tanmay <span>Jadhav.</span></div>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
 
 <!-- HERO -->
+<header class="hero" id="home">
 
-<section class="hero" id="home">
+<div class="code-bg">
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
-    <div class="hero-content">
-        <div class="tag">● DATA ANALYST PORTFOLIO</div>
+SELECT * FROM DATA;
+df.head()
+Data Analysis • SQL • Python • Power BI
+</div>
 
-        <h1>Tanmay <span>Jadhav</span></h1>
+<div class="hero-content">
 
-        <h2>Data Analyst | SQL | Python | Power BI</h2>
+    <div class="tag">● DATA ANALYST PORTFOLIO</div>
 
-        <p>
-            Turning Data into Insights. Passionate about Data Analytics,
-            Business Intelligence and Data-Driven Decision Making.
-        </p>
+    <h1>Tanmay <span>Jadhav</span></h1>
 
-        <div class="buttons">
-            <a href="#projects" class="btn primary">View Projects →</a>
-            <a href="#contact" class="btn secondary">Contact Me</a>
-        </div>
+    <h2>Data Analyst | SQL | Python | Power BI</h2>
+
+    <p>
+        Turning Data into Insights. Passionate about Data Analytics,
+        Business Intelligence and Data-Driven Decision Making.
+    </p>
+
+    <div class="buttons">
+        <a href="#projects" class="btn btn-primary">▥ View Projects →</a>
+        <a href="#contact" class="btn btn-outline">✉ Contact Me</a>
     </div>
 
-    <!-- DASHBOARD -->
+</div>
 
-    <div class="dashboard-box">
+<!-- Dashboard -->
+<div class="dashboard">
 
-        <div class="dash-top">
-            <h3>📊 Analytics Dashboard</h3>
-            <small id="dashLabel">STARBUCKS SALES</small>
+    <div class="dash-head">
+        <h3>📊 Analytics Dashboard</h3>
+        <small id="dashLabel">STARBUCKS SALES</small>
+    </div>
+
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <div class="kpis">
+            <div class="kpi">
+                <small>Total Sales</small>
+                <strong>$1.24M</strong>
+                <em>↑ 12.5%</em>
+            </div>
+            <div class="kpi">
+                <small>Transactions</small>
+                <strong>35.8K</strong>
+                <em>↑ 10.2%</em>
+            </div>
+            <div class="kpi">
+                <small>Avg. Order</small>
+                <strong>$34.58</strong>
+                <em>↑ 8.1%</em>
+            </div>
         </div>
 
-        <!-- DASHBOARD 1 -->
-
-        <div class="dash-slide active">
-
-            <div class="kpis">
-                <div class="kpi">
-                    <small>Total Sales</small>
-                    <strong>$1.24M</strong>
-                    <span class="up">↑ 12.5%</span>
-                </div>
-
-                <div class="kpi">
-                    <small>Transactions</small>
-                    <strong>35.8K</strong>
-                    <span class="up">↑ 10.2%</span>
-                </div>
-
-                <div class="kpi">
-                    <small>Avg. Order</small>
-                    <strong>$34.58</strong>
-                    <span class="up">↑ 8.1%</span>
-                </div>
-            </div>
-
-            <div class="chart-card">
+        <div class="chart-grid">
+            <div class="chart">
                 <div class="chart-title">Monthly Sales Trend</div>
                 <div class="bars">
-                    <div class="bar" style="height:40%"></div>
-                    <div class="bar" style="height:55%"></div>
-                    <div class="bar" style="height:70%"></div>
-                    <div class="bar" style="height:48%"></div>
-                    <div class="bar" style="height:65%"></div>
-                    <div class="bar" style="height:82%"></div>
-                    <div class="bar" style="height:60%"></div>
-                    <div class="bar" style="height:90%"></div>
-                    <div class="bar" style="height:76%"></div>
-                    <div class="bar" style="height:100%"></div>
+                    <i style="height:30%"></i><i style="height:42%"></i>
+                    <i style="height:55%"></i><i style="height:68%"></i>
+                    <i style="height:45%"></i><i style="height:73%"></i>
+                    <i style="height:83%"></i><i style="height:65%"></i>
+                    <i style="height:91%"></i><i style="height:100%"></i>
                 </div>
-                <div class="bar-labels">
-                    <span>Jan</span><span>Mar</span><span>May</span>
-                    <span>Jul</span><span>Sep</span><span>Dec</span>
+                <div class="labels">
+                    <span>Jan</span><span>Apr</span><span>Jul</span><span>Oct</span><span>Dec</span>
                 </div>
             </div>
 
-            <div class="dash-bottom">
-                <div class="chart-card">
-                    <div class="chart-title">Top Products</div>
-                    <div class="mini-list">
-                        Latte <span>28%</span><br>
-                        Cold Brew <span>24%</span><br>
-                        Cappuccino <span>20%</span><br>
-                        Americano <span>16%</span>
-                    </div>
-                </div>
-
-                <div class="chart-card">
-                    <div class="chart-title">Category Sales</div>
-                    <div class="mini-list">
-                Coffee <span>40%</span><br>
-                Tea <span>30%</span><br>
-                Bakery <span>20%</span><br>
-                Others <span>10%</span>
-                    </div>
-                </div>
+            <div class="chart">
+                <div class="chart-title">Sales Category</div>
+                <div class="product-line">Coffee <span>40%</span></div>
+                <div class="product-line">Tea <span>30%</span></div>
+                <div class="product-line">Bakery <span>20%</span></div>
+                <div class="product-line">Others <span>10%</span></div>
             </div>
-
         </div>
 
-        <!-- DASHBOARD 2 -->
-
-        <div class="dash-slide">
-
-            <div class="kpis">
-                <div class="kpi">
-                    <small>Customers</small>
-                    <strong>18,540</strong>
-                    <span class="up">↑ 14%</span>
-                </div>
-
-                <div class="kpi">
-                    <small>Revenue</small>
-                    <strong>₹8.5L</strong>
-                    <span class="up">↑ 18%</span>
-                </div>
-
-                <div class="kpi">
-                    <small>Growth</small>
-                    <strong>24.6%</strong>
-                    <span class="up">↑ 8%</span>
-                </div>
+        <div class="dash-lower">
+            <div class="lower-card">
+                <h4>Top Products</h4>
+                <div class="product-line">Latte <span>28%</span></div>
+                <div class="product-line">Cold Brew <span>24%</span></div>
+                <div class="product-line">Cappuccino <span>20%</span></div>
             </div>
+            <div class="lower-card">
+                <h4>Sales by Region</h4>
+                <div class="product-line">North <span>35%</span></div>
+                <div class="product-line">South <span>28%</span></div>
+                <div class="product-line">West <span>20%</span></div>
+            </div>
+        </div>
+    </div>
 
-            <div class="chart-card">
+    <!-- Slide 2 -->
+    <div class="slide">
+        <div class="kpis">
+            <div class="kpi"><small>Revenue</small><strong>₹8.5L</strong><em>↑ 18%</em></div>
+            <div class="kpi"><small>Customers</small><strong>18.5K</strong><em>↑ 14%</em></div>
+            <div class="kpi"><small>Growth</small><strong>24.6%</strong><em>↑ 8%</em></div>
+        </div>
+
+        <div class="chart-grid">
+            <div class="chart">
                 <div class="chart-title">Business Performance</div>
                 <div class="bars">
-                    <div class="bar" style="height:35%"></div>
-                    <div class="bar" style="height:50%"></div>
-                    <div class="bar" style="height:75%"></div>
-                    <div class="bar" style="height:60%"></div>
-                    <div class="bar" style="height:90%"></div>
-                    <div class="bar" style="height:65%"></div>
-                    <div class="bar" style="height:100%"></div>
-                    <div class="bar" style="height:80%"></div>
+                    <i style="height:30%"></i><i style="height:55%"></i>
+                    <i style="height:70%"></i><i style="height:50%"></i>
+                    <i style="height:85%"></i><i style="height:100%"></i>
+                    <i style="height:90%"></i>
                 </div>
-                <div class="bar-labels">
-                    <span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span>
-                </div>
+                <div class="labels"><span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span></div>
             </div>
-
-            <div class="dash-bottom">
-                <div class="chart-card">
-                    <div class="chart-title">Revenue</div>
-                    <div class="mini-list">
-                        Online <span>45%</span><br>
-                        Retail <span>30%</span><br>
-                        Direct <span>25%</span>
-                    </div>
-                </div>
-
-                <div class="chart-card">
-                    <div class="chart-title">Growth</div>
-                    <div class="mini-list">
-                        Sales <span>+18%</span><br>
-                        Users <span>+14%</span><br>
-                        Profit <span>+22%</span>
-                    </div>
-                </div>
+            <div class="chart">
+                <div class="chart-title">Revenue Channel</div>
+                <div class="product-line">Online <span>45%</span></div>
+                <div class="product-line">Retail <span>30%</span></div>
+                <div class="product-line">Direct <span>25%</span></div>
             </div>
-
         </div>
+        <div class="dash-lower">
+            <div class="lower-card"><h4>Sales Growth</h4>Revenue <span>+18%</span></div>
+            <div class="lower-card"><h4>Customer Growth</h4>Users <span>+14%</span></div>
+        </div>
+    </div>
 
-        <!-- DASHBOARD 3 -->
-
-        <div class="dash-slide">
-
-            <div class="kpis">
-                <div class="kpi">
-                    <small>Data Rows</small>
-                    <strong>24.5K</strong>
-                    <span class="up">Analyzed</span>
-                </div>
-
-                <div class="kpi">
-                    <small>Products</small>
-                    <strong>1,250</strong>
-                    <span class="up">Total</span>
-                </div>
-
-                <div class="kpi">
-                    <small>Regions</small>
-                    <strong>12</strong>
-                    <span class="up">Analyzed</span>
-                </div>
-            </div>
-
-            <div class="chart-card">
+    <!-- Slide 3 -->
+    <div class="slide">
+        <div class="kpis">
+            <div class="kpi"><small>Data Rows</small><strong>24.5K</strong><em>Analyzed</em></div>
+            <div class="kpi"><small>Products</small><strong>1,250</strong><em>Total</em></div>
+            <div class="kpi"><small>Regions</small><strong>12</strong><em>Analyzed</em></div>
+        </div>
+        <div class="chart-grid">
+            <div class="chart">
                 <div class="chart-title">Data Analysis Overview</div>
                 <div class="bars">
-                    <div class="bar" style="height:75%"></div>
-                    <div class="bar" style="height:45%"></div>
-                    <div class="bar" style="height:90%"></div>
-                    <div class="bar" style="height:60%"></div>
-                    <div class="bar" style="height:100%"></div>
-                    <div class="bar" style="height:80%"></div>
-                    <div class="bar" style="height:55%"></div>
-                    <div class="bar" style="height:95%"></div>
+                    <i style="height:70%"></i><i style="height:50%"></i>
+                    <i style="height:90%"></i><i style="height:65%"></i>
+                    <i style="height:100%"></i><i style="height:75%"></i>
+                    <i style="height:85%"></i>
                 </div>
-                <div class="bar-labels">
-                    <span>North</span><span>South</span><span>East</span><span>West</span>
-                </div>
+                <div class="labels"><span>North</span><span>South</span><span>East</span><span>West</span></div>
             </div>
-
-            <div class="dash-bottom">
-                <div class="chart-card">
-                    <div class="chart-title">Top Region</div>
-                    <div class="mini-list">
-                        North <span>35%</span><br>
-                        South <span>28%</span><br>
-                        West <span>20%</span>
-                    </div>
-                </div>
-
-                <div class="chart-card">
-                    <div class="chart-title">Analysis</div>
-                    <div class="mini-list">
-                        SQL <span>✓</span><br>
-                        Python <span>✓</span><br>
-                        Power BI <span>✓</span>
-                    </div>
-                </div>
+            <div class="chart">
+                <div class="chart-title">Tools Used</div>
+                <div class="product-line">SQL <span>✓</span></div>
+                <div class="product-line">Python <span>✓</span></div>
+                <div class="product-line">Excel <span>✓</span></div>
+                <div class="product-line">Power BI <span>✓</span></div>
             </div>
-
         </div>
-
-        <div class="dots">
-            <div class="dot active"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+        <div class="dash-lower">
+            <div class="lower-card"><h4>Data Cleaning</h4>Structured & analyzed</div>
+            <div class="lower-card"><h4>Insights</h4>Business intelligence</div>
         </div>
-
     </div>
-</section>
+
+    <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+
+</div>
+</header>
 
 <!-- SKILLS -->
-
 <section class="skills" id="skills">
-
     <h2 class="section-title">My <span>Skills</span></h2>
 
     <div class="skill-grid">
-
-        <div class="skill-card">
-            <div class="skill-icon">🗄️</div>
-            <h3>SQL</h3>
-            <p>Data Query & Analysis</p>
+        <div class="skill">
+            <div class="icon">🗄️</div>
+            <div><h3>SQL</h3><p>Data Query & Analysis</p></div>
         </div>
-
-        <div class="skill-card">
-            <div class="skill-icon">🐍</div>
-            <h3>Python</h3>
-            <p>Data Science & Analytics</p>
+        <div class="skill">
+            <div class="icon">🐍</div>
+            <div><h3>Python</h3><p>Data Science & Analytics</p></div>
         </div>
-
-        <div class="skill-card">
-            <div class="skill-icon">📊</div>
-            <h3>Advanced Excel</h3>
-            <p>Data Manipulation & BI</p>
+        <div class="skill">
+            <div class="icon">📗</div>
+            <div><h3>Advanced Excel</h3><p>Data Manipulation & BI</p></div>
         </div>
-
-        <div class="skill-card">
-            <div class="skill-icon">📈</div>
-            <h3>Power BI</h3>
-            <p>Interactive Dashboards</p>
+        <div class="skill">
+            <div class="icon">📊</div>
+            <div><h3>Power BI</h3><p>Interactive Dashboards</p></div>
         </div>
-
     </div>
 </section>
 
 <!-- PROJECTS -->
-
-<section id="projects">
-
+<section class="projects" id="projects">
     <h2 class="section-title">My <span>Projects</span></h2>
 
     <div class="project-grid">
 
-        <div class="project-card">
-            <div class="project-preview">
-                <div class="preview-bars">
-                    <div style="height:40%"></div>
-                    <div style="height:65%"></div>
-                    <div style="height:85%"></div>
-                    <div style="height:50%"></div>
-                    <div style="height:100%"></div>
-                    <div style="height:75%"></div>
-                    <div style="height:90%"></div>
-                </div>
-            </div>
-
+        <div class="project">
+            <div class="project-visual">☕</div>
             <div class="project-info">
                 <h3>Starbucks Power BI Dashboard</h3>
-                <p>Sales Analysis, KPIs, customer trends and business insights using Power BI.</p>
+                <p>Sales Analysis & Business Insights</p>
                 <a href="#contact">View Project →</a>
             </div>
         </div>
 
-        <div class="project-card">
-            <div class="project-preview">
-                <div class="preview-bars">
-                    <div style="height:60%"></div>
-                    <div style="height:90%"></div>
-                    <div style="height:45%"></div>
-                    <div style="height:75%"></div>
-                    <div style="height:100%"></div>
-                    <div style="height:65%"></div>
-                    <div style="height:80%"></div>
-                </div>
-            </div>
-
+        <div class="project">
+            <div class="project-visual">🗄️</div>
             <div class="project-info">
                 <h3>SQL Data Analytics</h3>
-                <p>Data exploration, SQL queries, data cleaning and analytical insights.</p>
+                <p>Data Exploration & Insights</p>
                 <a href="#contact">View Project →</a>
             </div>
         </div>
 
-        <div class="project-card">
-            <div class="project-preview">
-                <div class="preview-bars">
-                    <div style="height:55%"></div>
-                    <div style="height:85%"></div>
-                    <div style="height:70%"></div>
-                    <div style="height:100%"></div>
-                    <div style="height:45%"></div>
-                    <div style="height:80%"></div>
-                    <div style="height:95%"></div>
-                </div>
-            </div>
-
+        <div class="project">
+            <div class="project-visual">📈</div>
             <div class="project-info">
                 <h3>Excel Analytics</h3>
-                <p>Data analysis, pivot tables, charts and reporting using Excel.</p>
+                <p>Data Analysis & Visualization</p>
                 <a href="#contact">View Project →</a>
             </div>
         </div>
@@ -953,87 +935,56 @@ footer span {
 </section>
 
 <!-- CONTACT -->
-
 <section class="contact" id="contact">
-
-    <h2 class="section-title">Contact <span>Me</span></h2>
-
     <div class="contact-grid">
 
-        <a class="contact-card" href="mailto:tj360790@gmail.com">
-            <div class="icon">✉</div>
-            <div>
-                <small>Email</small>
-                <p>tj360790@gmail.com</p>
-            </div>
+        <a class="contact-item" href="mailto:tj360790@gmail.com">
+            <div class="icon">✉️</div>
+            <div><small>Email</small><strong>tj360790@gmail.com</strong></div>
         </a>
 
-        <a class="contact-card" href="tel:8698684553">
-            <div class="icon">☎</div>
-            <div>
-                <small>Phone</small>
-                <p>8698684553</p>
-            </div>
+        <a class="contact-item" href="tel:8698684553">
+            <div class="icon">📞</div>
+            <div><small>Phone</small><strong>8698684553</strong></div>
         </a>
 
-    </div>
+        <div class="connect">
+            <div><h3>Let's Connect!</h3><p>Open for opportunities & collaborations.</p></div>
+            <a href="mailto:tj360790@gmail.com" class="btn btn-primary">Get In Touch →</a>
+        </div>
 
-    <div class="contact-message">
-        <h3 style="color:white;margin-bottom:12px;">Let's Connect!</h3>
-        <p>Feel free to reach out for collaborations, opportunities or a friendly hello.</p>
-        <br>
-        <a href="mailto:tj360790@gmail.com" class="btn primary">Get In Touch →</a>
     </div>
-
 </section>
 
+<!-- FOOTER -->
 <footer>
-    © 2026 Tanmay Jadhav. All Rights Reserved.
-    <br><br>
-    Built with <span>♥</span> for Data Analytics
+    <div>© 2026 Tanmay Jadhav. All Rights Reserved.</div>
+    <div>Built with <span>♥</span> for Data Analytics</div>
 </footer>
 
 <script>
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+const label = document.getElementById('dashLabel');
 
-// Auto dashboard slider - 3 seconds
-
-let slides = document.querySelectorAll(".dash-slide");
-let dots = document.querySelectorAll(".dot");
-let dashLabel = document.getElementById("dashLabel");
-
-let labels = [
-    "STARBUCKS SALES",
-    "BUSINESS ANALYTICS",
-    "DATA ANALYSIS"
+const names = [
+    'STARBUCKS SALES',
+    'BUSINESS ANALYTICS',
+    'DATA ANALYSIS'
 ];
 
-let currentSlide = 0;
+let current = 0;
 
 function showSlide(index) {
-
-    slides.forEach(slide => slide.classList.remove("active"));
-    dots.forEach(dot => dot.classList.remove("active"));
-
-    slides[index].classList.add("active");
-    dots[index].classList.add("active");
-
-    dashLabel.textContent = labels[index];
-
-    currentSlide = index;
+    slides.forEach((s,i) => s.classList.toggle('active',i === index));
+    dots.forEach((d,i) => d.classList.toggle('active',i === index));
+    label.textContent = names[index];
 }
 
 setInterval(() => {
-
-    currentSlide++;
-
-    if(currentSlide >= slides.length) {
-        currentSlide = 0;
-    }
-
-    showSlide(currentSlide);
-
+    current = (current + 1) % slides.length;
+    showSlide(current);
 }, 3000);
-
 </script>
 
 </body>
